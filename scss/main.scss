@@ -1,0 +1,282 @@
+@import "config/variables.scss";
+@import "config/mixins.scss";
+
+//		FONTS
+
+@import "fonts.scss";
+
+
+
+
+ul li:first-child{
+	text-decoration: none;
+	list-style: none;
+}
+h2 {
+	font-size:72px;
+	font-weight:100;
+	font-family: Gagalin,Arial;
+	font-style: normal;
+}
+.container {
+	padding-top:20px;
+	width:960px;
+	position:center;
+	margin:0 auto;
+}
+.header	 {
+	height:100vh;
+	width:100%;
+	background: url("../img/video-bg.png") ;
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:relative;
+	box-sizing:border-box;
+}
+
+.header__menu {
+	display:flex;
+	justify-content: space-around;
+}
+.logo {
+	margin-right: auto;
+}
+.menu  {
+	display: flex;
+	color:#fff;
+	li {
+		margin-right:33px;
+		font-family:Ubuntu, Arial;
+		font-size: 13px;
+		font-weight:normal;
+		text-transform: uppercase;
+		&:hover {
+			text-decoration: underline;
+			cursor:pointer;
+		}
+	}
+}
+
+.button {
+	height: 33px;
+	margin-top:11px;
+	 a {
+		font-family:Ubuntu, Arial;
+		font-weight:normal;
+		font-size: 13px;
+		text-transform: uppercase;
+	  	color: #fff;
+	  	text-decoration: none;
+	  	padding: .8em 1em calc(.8em + 3px);
+	  	border-radius: 5px;
+	  	background: #e45028;
+	  	width: 97px;
+	  	height: 33px;
+	}
+}
+
+.header__button:hover {
+	background: #ae3616;
+}
+ 
+.header__content {
+	display:flex;
+	justify-content:space-around;
+	padding-bottom:90px;
+}
+.header__left, .header__right {
+	width:400px;
+}
+.header__left{
+	position:relative;
+}
+.drops {
+	position:absolute;
+	left:-30px;
+	top:70px
+}
+.header__right {
+	padding-top:60px;
+	h2 {
+		color:#f9b43b;
+	}
+	p {
+		color:#fff;
+		font-size:65px;
+		font-weight: medium;
+		font-family: Lifehack,Arial;
+		line-height: 60px;
+		margin-top:-40px;
+	}
+}
+.arrows {
+	width:30px;
+	margin:0 auto;
+	transition-duration: .5s;
+	&:hover {
+		transform:scale(1.1) translateY(-10px);
+		cursor:pointer;
+	}
+}
+.navigation {
+	position:fixed;
+	display:inline-block;
+	right:100px;
+	top:90px;
+	z-index:100;
+	width:30px;
+	a {
+		position:absolute;
+		left:32%;
+		top:32%;
+		width: 6px;
+		height: 6px;
+		background: #fff;
+		border-radius:50%;
+	}
+}
+.radius {
+	position:relative;
+	width:14px;
+	height:14px;
+	margin-top:3px;
+	&:hover {
+		border: 1px solid white;
+		border-radius:50%;
+		margin:1px;
+		a {
+			margin:1px -1px -1px -2px;
+		}
+	}
+}
+.radius--active {
+		border: 1px solid white;
+		border-radius:50%;
+		margin:1px;
+		a {
+			margin:1px -1px -1px -2px;
+		}
+	}
+/*        МЫ ЛУЧШИЕ  		*/
+
+
+.section {
+	width:100%;
+	height:100vh;
+	padding-top: 110px;
+	box-sizing: border-box;	
+}
+.section__weBest {
+	background: url("../img/bg2.png");
+	background-repeat:no-repeat;
+	background-size: cover;
+	padding-top:20px;
+}
+.title {
+	color:#2f3234;
+	text-align: center;
+}
+.description {
+	display:flex;
+	justify-content: space-around;
+	h4 {
+		font-family:Lifehack, Arial;
+		font-size:24px;
+		color:#2f3234;
+		margin-top:10px;
+	}
+	p {
+		margin-top:-10px;
+		color:#7f7e7d;
+		font-size:14px;
+		font-family: Ubuntu;
+		font-weight:300;
+	}
+}
+.meet, .hand, .nature {
+	width:300px;
+	text-align: center;
+}
+
+/* 		3 секция		*/
+.reviews {
+	display:flex;
+	flex-wrap: wrap;
+	background:black;
+	p {
+		font-family: Ubuntu, Arial;
+		font-size:14px;
+		color:#fff;
+		font-weight: 300;
+		padding:20px;
+		line-height:30px;
+	}
+	h3 {
+		font-family: Gagalin;
+		font-size:14px;
+		font-weight: normal;
+		color:#fff;
+		margin-top:25px;
+		padding-left:15px;
+	}
+}
+.people {
+	height:50vh;
+	width:25%;
+	box-sizing: border-box;
+	transition-duration:1s;
+	&:hover .hide {
+		visibility: visible;
+		background-color: rgba(0, 0, 0, 0.65);
+		transition-duration:1s;
+	}
+}
+.hide {
+	width: 100%;
+	height: 100%;
+	margin-top:0;
+	visibility: hidden;
+	cursor:pointer;
+	padding-top:1px;
+}
+.people__1 {
+	background: url("../img/people1.png");
+	background-size:cover;
+}
+.people__2 {
+	background: url("../img/people2.png");
+	background-size:cover;
+}
+.people__3 {
+	background: url("../img/people3.png");
+	background-size:cover;
+}
+.people__4 {
+	background: url("../img/people4.png");
+	background-size:cover;
+}
+.people__5 {
+	background: url("../img/people5.png");
+	background-size:cover;
+}
+.people__6 {
+	background: url("../img/people6.png");
+	background-size:cover;
+}
+.people__7 {
+	background: url("../img/people7.png");
+	background-size:cover;
+}
+.people__8 {
+	background: url("../img/people8.png");
+	background-size:cover;
+}
+.reviews__button {
+	padding-left:15px;
+	a{
+		background: #2f3234;
+		&:hover{
+			background: #1f2122;
+		}
+	}
+}
