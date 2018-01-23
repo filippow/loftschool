@@ -6,17 +6,49 @@
 @import "fonts.scss";
 
 
-
-
 ul li:first-child{
 	text-decoration: none;
 	list-style: none;
 }
-h2 {
+ul {
+	margin: 0;
+	padding: 0;
+}
+.ubuntu__light {
+	color:#7f7e7d;
+	font-size:14px;
+	font-family: Ubuntu, Arial;
+	font-weight:300;
+}
+.title__item {
 	font-size:72px;
 	font-weight:100;
 	font-family: Gagalin,Arial;
 	font-style: normal;
+}
+.title {
+	color:#2f3234;
+	text-align: center;
+}
+.button {
+	font-family:Ubuntu, Arial;
+	font-weight:normal;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 14px 10px 18px;
+	border-radius: 8px;
+	height: 35px;
+}
+.header__button {
+	margin:28px 17px 0 0;
+	.button {
+		background:#e45028;
+		&:hover {
+			background: darken(#e45028,7%);
+		}
+	}
 }
 .container {
 	padding-top:20px;
@@ -32,11 +64,13 @@ h2 {
 	background-size:cover;
 	position:relative;
 	box-sizing:border-box;
+	min-height:650px;
+	
 }
-
 .header__menu {
 	display:flex;
 	justify-content: space-around;
+	margin-top:-12px;
 }
 .logo {
 	margin-right: auto;
@@ -44,8 +78,9 @@ h2 {
 .menu  {
 	display: flex;
 	color:#fff;
-	li {
-		margin-right:33px;
+	margin:17px 0 0 0;
+	&__item {
+		margin:12px 33px 0px 0;
 		font-family:Ubuntu, Arial;
 		font-size: 13px;
 		font-weight:normal;
@@ -56,48 +91,24 @@ h2 {
 		}
 	}
 }
-
-.button {
-	height: 33px;
-	margin-top:11px;
-	 a {
-		font-family:Ubuntu, Arial;
-		font-weight:normal;
-		font-size: 13px;
-		text-transform: uppercase;
-	  	color: #fff;
-	  	text-decoration: none;
-	  	padding: .8em 1em calc(.8em + 3px);
-	  	border-radius: 5px;
-	  	background: #e45028;
-	  	width: 97px;
-	  	height: 33px;
-	}
-}
-
-.header__button:hover {
-	background: #ae3616;
-}
- 
 .header__content {
 	display:flex;
 	justify-content:space-around;
-	padding-bottom:90px;
+	position:absolute;
+	top:50%;
+	margin-top:-262px;
 }
 .header__left, .header__right {
 	width:400px;
 }
 .header__left{
 	position:relative;
-}
-.drops {
-	position:absolute;
-	left:-30px;
-	top:70px
+	margin-left:23px;
+	box-sizing:border-box;
 }
 .header__right {
-	padding-top:60px;
-	h2 {
+	margin:72px 0 0 62px;
+	.title__item {
 		color:#f9b43b;
 	}
 	p {
@@ -106,91 +117,118 @@ h2 {
 		font-weight: medium;
 		font-family: Lifehack,Arial;
 		line-height: 60px;
-		margin-top:-40px;
+		margin-top:-42px;
+		margin-left:1px;
 	}
 }
 .arrows {
 	width:30px;
-	margin:0 auto;
+	position:absolute ;
+	left:50%;
+	bottom:60px;
+	margin-left:-18px;
 	transition-duration: .5s;
 	&:hover {
 		transform:scale(1.1) translateY(-10px);
 		cursor:pointer;
 	}
 }
-.navigation {
+.navigat {
+	list-style:none;
 	position:fixed;
-	display:inline-block;
-	right:100px;
+	right:153px;
 	top:90px;
-	z-index:100;
-	width:30px;
-	a {
-		position:absolute;
-		left:32%;
-		top:32%;
-		width: 6px;
-		height: 6px;
-		background: #fff;
-		border-radius:50%;
-	}
-}
-.radius {
-	position:relative;
-	width:14px;
-	height:14px;
-	margin-top:3px;
-	&:hover {
-		border: 1px solid white;
-		border-radius:50%;
-		margin:1px;
-		a {
-			margin:1px -1px -1px -2px;
+	margin: 0;
+	padding: 0;
+	width: 40px;
+	.navigat__active {
+		.navigat__link:before {
+			opacity:1;
+			width:15px;
+			height: 15px;	
+			}
 		}
-	}
 }
-.radius--active {
-		border: 1px solid white;
-		border-radius:50%;
-		margin:1px;
-		a {
-			margin:1px -1px -1px -2px;
-		}
-	}
-/*        МЫ ЛУЧШИЕ  		*/
+.navigat__link:before, .navigat__link:hover:before {
+	content:"";
+	display:block;
+	position:absolute;
+	width: 0px;	
+	height: 0px;	
+	border-radius: 50%;
+	border:1px solid #fff;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	transition:.5s;
+	opacity:0;
+}
+.navigat__link:hover:before {
+	opacity:1;
+	width:15px;
+	height:15px;
+	transition:.5s;
+}
+.navigat__item {
+	width:10px;
+	height: 10px;
+	margin-bottom:11px;
+	position: relative;
+	display:block;
+}
+.navigat__link {
+	width: 6px;
+	height: 6px;
+	padding: 6px;
+	position:absolute;
+	border-radius: 50%;
+}
+.navigat__link:after {
+	content:"";
+	display:block;
+	position:absolute;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #fff;
+}
 
+
+/*        МЫ ЛУЧШИЕ  		!!!!!!!!!!!!!!!!!!!!!!!   */
 
 .section {
 	width:100%;
 	height:100vh;
-	padding-top: 110px;
+	padding-bottom:30px;
 	box-sizing: border-box;	
 }
 .section__weBest {
-	background: url("../img/bg2.png");
+	background: url("../img/bg.jpg");
 	background-repeat:no-repeat;
 	background-size: cover;
-	padding-top:20px;
-}
-.title {
-	color:#2f3234;
-	text-align: center;
+	position:relative;
+	display:flex;
+	.container {
+		position:center;
+		margin:auto;
+		margin-top:35px ;
+	}
 }
 .description {
 	display:flex;
 	justify-content: space-around;
-	h4 {
+	list-style:none;
+	margin-top:-20px;
+	.description__title {
 		font-family:Lifehack, Arial;
 		font-size:24px;
 		color:#2f3234;
 		margin-top:10px;
 	}
-	p {
+	.ubuntu__light {
 		margin-top:-10px;
-		color:#7f7e7d;
-		font-size:14px;
-		font-family: Ubuntu;
-		font-weight:300;
+		color:#807f7e;
+		line-height:25px;
 	}
 }
 .meet, .hand, .nature {
@@ -200,18 +238,19 @@ h2 {
 
 /* 		3 секция		*/
 .reviews {
-	display:flex;
-	flex-wrap: wrap;
+	
 	background:black;
-	p {
-		font-family: Ubuntu, Arial;
-		font-size:14px;
+	&__list {
+		display:flex;
+		flex-wrap: wrap;
+		list-style:none;
+	}
+	.ubuntu__light {
 		color:#fff;
-		font-weight: 300;
 		padding:20px;
 		line-height:30px;
 	}
-	h3 {
+	.reviews__title {
 		font-family: Gagalin;
 		font-size:14px;
 		font-weight: normal;
@@ -239,44 +278,20 @@ h2 {
 	cursor:pointer;
 	padding-top:1px;
 }
-.people__1 {
-	background: url("../img/people1.png");
-	background-size:cover;
-}
-.people__2 {
-	background: url("../img/people2.png");
-	background-size:cover;
-}
-.people__3 {
-	background: url("../img/people3.png");
-	background-size:cover;
-}
-.people__4 {
-	background: url("../img/people4.png");
-	background-size:cover;
-}
-.people__5 {
-	background: url("../img/people5.png");
-	background-size:cover;
-}
-.people__6 {
-	background: url("../img/people6.png");
-	background-size:cover;
-}
-.people__7 {
-	background: url("../img/people7.png");
-	background-size:cover;
-}
-.people__8 {
-	background: url("../img/people8.png");
-	background-size:cover;
-}
 .reviews__button {
-	padding-left:15px;
-	a{
+margin-left:15px;
+width:110px;
+	.button {
 		background: #2f3234;
-		&:hover{
-			background: #1f2122;
+		&:hover {
+			background: darken(#2f3234,7%);
 		}
 	}
+}
+.people__1,.people__2,
+.people__3,.people__4,
+.people__5,.people__6,
+.people__7,.people__8 {
+	background-size:cover;
+	background-repeat:no-repeat;
 }
