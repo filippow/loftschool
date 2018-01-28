@@ -8,128 +8,303 @@
 </head>
 <body>
 	<div class="wrapper">
-		<header class="header">
-			<div class="container">
-				<div class="header__menu">
+		<header class="section header">
+			<div class="container header__container">
+				<div class="header__nav">
 					<div class="logo">
 						<a href="#"><img src="../icons/logo.svg"></a>
 					</div>
 					<nav class="nav">
-						<ul class="menu">
-							<li class="menu__item">О нас</li>
-							<li class="menu__item">Бургеры</li>
-							<li class="menu__item">Команда</li>
-							<li class="menu__item">Меню</li>
-							<li class="menu__item">Отзывы</li>
-							<li class="menu__item">Контакты</li>
+						<ul class="nav__list">
+							<li class="nav__item">О нас</li>
+							<li class="nav__item">Бургеры</li>
+							<li class="nav__item">Команда</li>
+							<li class="nav__item">Меню</li>
+							<li class="nav__item">Отзывы</li>
+							<li class="nav__item">Контакты</li>
 						</ul>
 					</nav>
-					<div class="header__button ">
-						<a class="button" href="#">Заказать</a>
-					</div>
+					<a class="button" href="#">Заказать</a>
 				</div>
 				<div class="header__content">
 					<div class="header__left">
-						<img src="../img/steam.png">
+						<img class="header__left__img" src="../img/steam.png">
 					</div>
 					<div class="header__right">
-						<h2 class="title__item">Мы делаем</h2>
-						<p>натуральные<br>
+						<h2 class="title title--header">Мы делаем</h2>
+						<p class="header__right__descr">натуральные<br>
 							бургеры</p>
 					</div>	
 				</div>
-
-			</div>
-			<div class="arrows">
-					<img src="../icons/arrow-scroll.svg">
+				<div class="arrows">
+					<img class="arrows__img" src="../icons/arrow-scroll.svg">
 				</div>
+			</div>
 		</header>
 
-		<section class="section section__weBest">
+		<section class="section weBest">
 			<div class="container">
-				<div class="title">
-					<h2 class="title__item">Мы лучшие</h2>
-				</div>
-				<ul class="description">
-					<li class="meet">
+				<h2 class="title title--black">Мы лучшие</h2>
+				<ul class="description__list">
+					<li class="description__item">
 						<img src="../icons/meat.svg" alt="meet">
-						<h4 class="description__title">100% свежее мясо</h4>
-						<p class="ubuntu__light" >Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+						<div class="description__info">
+							<h4 class="description__title">100% свежее мясо</h4>
+							<p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+						</div>
 					</li>
-					<li class="hand">
+					<li class="description__item">
 						<img src="../icons/hand.svg" alt="meet">
-						<h4 class="description__title">Ручная сборка</h4>
-						<p class="ubuntu__light" >Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+						<div class="description__info">
+							<h4 class="description__title">Ручная сборка</h4>
+							<p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+						</div>
 					</li>
-					<li class="nature">
+					<li class="description__item">
 						<img src="../icons/natural.svg" alt="meet">
-						<h4 class="description__title">Натуральные <br> ингридиенты</h4>
-						<p class="ubuntu__light" >Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+						<div class="description__info">
+							<h4 class="description__title">Натуральные<br>ингридиенты</h4>
+							<p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+						</div>
 					</li>
 				</ul>
 			</div>
 		</section>
 
-		<section class="reviews">
+		<section class="section team">
+				<div class="team__container">
+					<h2 class="title title--team-position">Команда</h2>
+					<ul class="team__list">
+						<li class="team__item">
+							<h3 class="team__title"> Дэниэл Редклиф</h3>
+							<div class="team__info">	
+								<div class="team__photo">
+									<img class="team__img" src="../img/team.png" alt="Photo">	
+								</div>
+								<div class="info__worker">	
+									<h4 class="worker__name">Оператор</h4>
+									<p>	С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
+								</div>
+							</div>
+						</li>
+						<li class="team__item team__list--active">
+							<h3 class="team__title"> Дэниэл Редклиф</h3>
+							<div class="team__info">	
+								<div class="team__photo">
+									<img class="team__img" src="../img/team.png" alt="Photo">	
+								</div>
+								<div class="info__worker">	
+									<h4 class="worker__name">Оператор</h4>
+									<p>	С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
+								</div>
+							</div>
+						</li>
+						<li class="team__item">
+							<h3 class="team__title"> Дэниэл Редклиф</h3>
+							<div class="team__info">	
+								<div class="team__photo">
+									<img class="team__img" src="../img/team.png" alt="Photo">	
+								</div>
+								<div class="info__worker">	
+									<h4 class="worker__name">Оператор</h4>
+									<p>	С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
+								</div>
+							</div>
+						</li>
+						<li class="team__item">
+							<h3 class="team__title"> Дэниэл Редклиф</h3>
+							<div class="team__info">	
+								<div class="team__photo">
+									<img class="team__img" src="../img/team.png" alt="Photo">	
+								</div>
+								<div class="info__worker">	
+									<h4 class="worker__name">Оператор</h4>
+									<p>	С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
+								</div>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+		</section>
+
+		<section class="section menu">
+			<h2 class="title title--menu">Меню</h2>
+				<ul class="menu__container">
+					<li class="menu__list ">
+						<div class="menu__item" style="background-image: url(../img/meat_eat.jpg)">
+							<div class="menu__item__bg"></div>
+							<div class="text__rotate">Для мясоедов</div>
+						</div>
+						<div class="menu__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.
+						</div>
+					</li>
+					<li class="menu__list menu__list--active ">
+						<div class="menu__item " style="background-image: url(../img/vegan_eat.jpg)">
+							<div class="menu__item__bg"></div>
+							<div class="text__rotate">Вегетерианское</div>
+						</div>
+						<div class="menu__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.
+						</div>
+					</li>
+					<li class="menu__list ">
+						<div class="menu__item" style="background-image: url(../img/diet_eat.jpg)">
+							<div class="menu__item__bg"></div>
+							<div class="text__rotate">Диетическое</div>
+						</div>
+						<div class="menu__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.
+						</div>
+					</li>
+				</ul>
+		</section>
+
+		<section class="section reviews">
 			<ul class="reviews__list">
-				<li class="people people__1" style="background-image: url(../img/people1.png)">
+				<li class="reviews__people" style="background-image: url(../img/people1.png)">
 					<div class="hide">
-						<h3 class="reviews__title ">Константин Спилберг</h3>
-						<p class="ubuntu__light">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<div class="reviews__button"><a class="button"  href="#">Подробнее</a></div>
+						<h3 class="hide__title ">Константин Спилберг</h3>
+						<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a class="button button--hide"  href="#">Подробнее</a>
 					</div>
 				</li>
-				<li class="people people__2" style="background-image: url(../img/people2.png)">
+				<li class="reviews__people" style="background-image: url(../img/people2.png)">
 					<div class="hide">
-						<h3 class="reviews__title ">Константин Спилберг</h3>
-						<p class="ubuntu__light">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<div class=" reviews__button"><a class="button" href="#">Подробнее</a></div>
+						<h3 class="hide__title ">Константин Спилберг</h3>
+						<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a class="button button--hide"  href="#">Подробнее</a>
 					</div>
 				</li>
-				<li class="people people__3" style="background-image: url(../img/people3.png)">
+				<li class="reviews__people" style="background-image: url(../img/people3.png)">
 					<div class="hide">
-						<h3 class="reviews__title ">Константин Спилберг</h3>
-						<p class="ubuntu__light">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<div class=" reviews__button"><a class="button" href="#">Подробнее</a></div>
+						<h3 class="hide__title ">Константин Спилберг</h3>
+						<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a class="button button--hide"  href="#">Подробнее</a>
 					</div>
 				</li>
-				<li class="people people__4" style="background-image: url(../img/people4.png)">
+				<li class="reviews__people" style="background-image: url(../img/people4.png)">
 					<div class="hide">
-						<h3 class="reviews__title ">Константин Спилберг</h3>
-						<p class="ubuntu__light">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<div class=" reviews__button"><a class="button" href="#">Подробнее</a></div> 
+						<h3 class="hide__title ">Константин Спилберг</h3>
+						<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a class="button button--hide"  href="#">Подробнее</a>
 					</div>
 				</li>
-				<li class="people people__5" style="background-image: url(../img/people5.png)">
+				<li class="reviews__people" style="background-image: url(../img/people5.png)">
 					<div class="hide">
-						<h3 class="reviews__title ">Константин Спилберг</h3>
-						<p class="ubuntu__light">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<div class=" reviews__button"><a class="button" href="#">Подробнее</a></div>
+						<h3 class="hide__title ">Константин Спилберг</h3>
+						<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a class="button button--hide"  href="#">Подробнее</a>
 					</div>
 				</li>
-				<li class="people people__6" style="background-image: url(../img/people6.png)">
+				<li class="reviews__people" style="background-image: url(../img/people6.png)">
 					<div class="hide">
-						<h3 class="reviews__title ">Константин Спилберг</h3>
-						<p class="ubuntu__light">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<div class=" reviews__button"><a class="button" href="#">Подробнее</a></div>
+						<h3 class="hide__title ">Константин Спилберг</h3>
+						<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a class="button button--hide"  href="#">Подробнее</a>
 					</div>
 				</li>
-				<li class="people people__7" style="background-image: url(../img/people7.png)">
+				<li class="reviews__people" style="background-image: url(../img/people7.png)">
 					<div class="hide">
-						<h3 class="reviews__title ">Константин Спилберг</h3>
-						<p class="ubuntu__light">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<div class=" reviews__button"><a class="button" href="#">Подробнее</a></div>
+						<h3 class="hide__title ">Константин Спилберг</h3>
+						<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a class="button button--hide"  href="#">Подробнее</a>
 					</div>
 				</li>
-				<li class="people people__8" style="background-image: url(../img/people8.png)">
+				<li class="reviews__people" style="background-image: url(../img/people8.png)">
 					<div class="hide">
-						<h3 class="reviews__title ">Константин Спилберг</h3>
-						<p class="ubuntu__light">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<div class=" reviews__button"><a class="button" href="#">Подробнее</a></div>
+						<h3 class="hide__title ">Константин Спилберг</h3>
+						<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a class="button button--hide"  href="#">Подробнее</a>
 					</div>
 				</li>
 			</ul>
 		</section>
+
+		<section class="section order">
+			<div class="container">
+				<h2 class="title order--title">Закажите доставку</h2>
+				<form class="order__form" action="" method="post" name="order__form">
+					<div class="column">
+						<div class="row">
+							<label class="form__block">
+								<div>Имя</div>
+								<input type="text" class="form__input">
+							</label>
+							<label class="form__block">
+								<div>Телефон</div>
+								<input type="text" class="form__input">
+							</label>
+						</div>
+						<div class="row">
+							<label class="form__block">
+								<div>Улица</div>
+								<input type="text" class="form__input">
+							</label>
+						</div>
+						<div class="row ">
+							<label class="form__block">
+								<div>Дом</div>
+								<input type="text" class="form__input">
+							</label>
+							<label class="form__block">
+								<div>Корпус</div>
+								<input type="text" class="form__input">
+							</label>
+							<label class="form__block">
+								<div>Квартира</div>
+								<input type="text" class="form__input">
+							</label>
+							<label class="form__block">
+								<div>Этаж</div>
+								<input type="text" class="form__input">
+							</label>
+						</div>
+					</div>
+					<div class="column">
+						<div class="row">
+							<label class="form__block">
+								<div>Комментарий</div>
+							<textarea name="" id="" cols="60" rows="6" class="form__textarea">asdasdasdad</textarea>
+						</label>
+						</div>
+						<div class="row">
+							<label class="form__block">
+								<input type="radio" name="money" >Потребуется сдача
+							</label>
+						<label class="form__block">
+							<input type="radio" name="money" >Оплата картой
+						</label>
+						</div>
+						<div class="row">
+							<label class="form__block">
+								<input type="checkbox">Не перезванивать
+							</label>
+						</div>
+						<div class="row">
+							<a href="" class="button button--order">Заказать</a>
+							<div class="clear">Очистить</div>
+						</div>
+					</div>
+			</form>
+		</section>
+
+		<footer class=" contacts">
+			<div class="contacts__map"> 
+				<img class="map__img" src="../img/map.jpg" alt="Карта">
+			</div>
+			<div class="contacts__info">
+				<div class="contacts__left">
+					<p class="left__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</p>
+					<p class="left__phone"><img class="phone__icons" src="../icons/phone.svg" alt="">  +7 (812) 377-13-77</p>
+				</div>
+				<div class="social__right">
+					<a href="#" class="social__link social__vk"><img class="social__img" src="../icons/vk.svg" alt=""></a>
+					<a href="#" class="social__link social__fb"><img class="social__img" src="../icons/fb.svg" alt=""></a>
+					<a href="#" class="social__link social__ig"><img class="social__img" src="../icons/inst.svg" alt=""></a>
+					<a href="#" class="social__link social__tw"><img class="social__img" src="../icons/twitter.svg" alt=""></a>
+				</div>
+			</div>
+		</footer>
+
 	</div>
 
 	<ul class="navigat">

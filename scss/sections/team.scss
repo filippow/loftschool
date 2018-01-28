@@ -1,0 +1,92 @@
+.team {
+	background: url("../img/bg_team.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	height:100vh;
+	width:100%;
+	position:relative;
+}
+.title--team-position {
+	margin:130px 0 0 95px;
+}
+.team__container {
+	list-style:none;
+	position:absolute;
+	right:0;
+	width:48%;
+	height:100%;
+	z-index:1;
+}
+.team__container:before {
+	content:"";
+	z-index:-1;
+	background: #2e3133;
+	opacity:0.9;
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+}
+.team__item {
+	margin:40px 0 0 100px;
+}
+.team__title {
+	color:#fff;
+	font-family: Gagalin;
+	font-size: 14px;
+	font-weight: normal;
+	cursor: pointer;
+	&:hover {
+		color:#f9b43b;
+	}	
+}
+.team__title:before {
+	content:"";
+	display:block;
+	position:absolute;
+	left:80px;
+	margin-top:6px;
+	border: 8px solid transparent;	
+	border-top: 8px solid #f9b43b;
+}
+.team__info {
+	justify-content:space-between;
+	display:none;
+}
+.team__photo{	
+}
+.team__img {
+	border-radius: 50%;
+}
+.info__worker {
+	width:240px;
+	margin-right:160px;
+	font-family:Ubuntu, Arial;
+	color:#fff;
+	font-size:14px;
+}
+.worker__name {
+	font-weight:900;
+}
+.info__worker p {
+	font-weight: 300;
+}
+.team__list--active {
+	.team__title {
+		color:#f9b43b;
+	}
+	.team__info {
+		display:flex;
+	}
+	.team__title {
+		color:#f9b43b;
+		&:before {
+			transform:rotate(180deg);
+			margin-top:-5px;
+		}
+	}
+}
+
+
+
+
