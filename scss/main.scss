@@ -1,7 +1,18 @@
-@import "config/variables.scss";
-@import "config/mixins.scss";
+//	RESOLUTION
+$tablets:768px;
+$phones:480px;
+
+
 //		FONTS
 @import "fonts.scss";
+
+//		MEDIA
+@import "media.scss";
+//		CONFIG
+
+@import "config/variables.scss";
+@import "config/mixins.scss";
+
 //      SECTIONS
 @import "../scss/sections/common.scss";
 @import "../scss/sections/header.scss";
@@ -16,27 +27,25 @@
 
 
 
-
-
-
-
-
-
-
 .navigat {
 	list-style:none;
 	position:fixed;
-	right:153px;
-	top:90px;
+	right:rem(153px);
+	top:rem(90px);
 	margin: 0;
 	padding: 0;
-	width: 40px;
+	width: rem(40px);
 	z-index:1000;
+	@include tablets() {
+		right:rem(53px);
+		top:rem(100px);
+
+	}
 	.navigat__active {
 		.navigat__link:before {
 			opacity:1;
-			width:15px;
-			height: 15px;	
+			width:rem(15px);
+			height: rem(15px);	
 			}
 		}
 }
@@ -44,10 +53,10 @@
 	content:"";
 	display:block;
 	position:absolute;
-	width: 0px;	
-	height: 0px;	
+	width: rem(0px);	
+	height: rem(0px);	
 	border-radius: 50%;
-	border:1px solid #fff;
+	border:rem(1px) solid #fff;
 	top:50%;
 	left:50%;
 	transform:translate(-50%,-50%);
@@ -56,21 +65,24 @@
 }
 .navigat__link:hover:before {
 	opacity:1;
-	width:15px;
-	height:15px;
+	width:rem(15px);
+	height:rem(15px);
 	transition:.3s;
 }
 .navigat__item {
-	width:10px;
-	height: 10px;
-	margin-bottom:11px;
+	width:rem(10px);
+	height: rem(10px);
+	margin-bottom:rem(11px);
 	position: relative;
 	display:block;
+	@include tablets() {
+		margin-bottom:rem(20px);
+	}
 }
 .navigat__link {
-	width: 6px;
-	height: 6px;
-	padding: 6px;
+	width: rem(6px);
+	height: rem(6px);
+	padding: rem(6px);
 	position:absolute;
 	border-radius: 50%;
 }
@@ -78,8 +90,8 @@
 	content:"";
 	display:block;
 	position:absolute;
-	width: 6px;
-	height: 6px;
+	width: rem(6px);
+	height: rem(6px);
 	border-radius: 50%;
 	background: #fff;
 }

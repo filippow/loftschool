@@ -5,7 +5,15 @@
 	background-size:cover;
 }
 .order--title {
-		padding-top:120px;
+		padding-top:rem(120px);
+	@include tablets() {
+		padding-top:rem(50px);
+		font-size:rem(72px);
+	}
+	@include phones() {
+		font-size: rem(30px);
+		padding-top:rem(20px);
+	}
 }
 .order__form {
 	margin-top:15px;
@@ -14,14 +22,32 @@
 	flex-wrap:wrap;
 	width:100%;
 	justify-content:space-around;
+	@include tablets() {
+		flex-direction:column;
+		margin: 0;
+		padding: 0;
+		align-items: center;
+	}
 }
-.column {
+.form__column {
 	width:49%;
+	@include tablets() {
+		width:65%;
+	}
+	@include phones() {
+			width: 85%;
+			margin: 0;
+			flex-direction:column;
+			display:flex;
+		}
 }
-.row {
+.form__row {
 	display:flex;
 	color:white;
-	align-items:center;
+	justify-content:left;
+	@include phones() {
+		justify-content:space-around;
+	}
 }
 .form__block {
 	padding:15px 0 10px 0;
@@ -30,20 +56,44 @@
 	display:inline-block;
 	color:#fff;
 	font-size:14px;
+	text-align:left;
 }
 .form__input {
-	width:90%;
+	width:100%;
 	padding:8px;
+	@include phones() {
+		padding:5px;
+	}
+}
+.form__input--order {
+	width:100%;
+	padding: 8px;
 }
 .form__input, .form__textarea {
 	border-radius:5px;
+	border:1px solid #d1cfcb;
 	font-family: Ubuntu, Arial;
 	font-size: 14px;
 	color:#2f3234;
 	outline-color:#f9b43b;
 }
+
+
+
+.form__textarea {
+	resize:none;
+	width: 100%;
+	overflow: 	hidden;
+	@include phones() {
+		height: 20%;
+	}
+}
 .button--order {
 	margin-top:15px;
+	border:none;
+	@include phones() {
+		margin-top:5px;
+	}
 }
 .clear {
 	display:inline-block;
@@ -51,4 +101,9 @@
 	margin:15px 0 0 20px;
 	padding:5px;
 	cursor:pointer;
+	background: none;
+	border:none;
+	@include phones() {
+		margin-top:5px;
+	}
 }

@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="	width=device-width, initial-scale=1">
+
+	<title>Бургеры</title>
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/normalize.css"> 
 </head>
@@ -25,6 +28,11 @@
 						</ul>
 					</nav>
 					<a class="button" href="#">Заказать</a>
+					<div class="gamburger">
+						<div class="gamburger__item"></div>
+						<div class="gamburger__item"></div>
+						<div class="gamburger__item"></div>
+					</div>
 				</div>
 				<div class="header__content">
 					<div class="header__left">
@@ -63,7 +71,7 @@
 					<li class="description__item">
 						<img src="../icons/natural.svg" alt="meet">
 						<div class="description__info">
-							<h4 class="description__title">Натуральные<br>ингридиенты</h4>
+							<h4 class="description__title">Натуральные ингридиенты</h4>
 							<p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
 						</div>
 					</li>
@@ -72,7 +80,8 @@
 		</section>
 
 		<section class="section team">
-				<div class="team__container">
+			<div class="team__container content">
+				<div class="content__info">
 					<h2 class="title title--team-position">Команда</h2>
 					<ul class="team__list">
 						<li class="team__item">
@@ -88,7 +97,7 @@
 							</div>
 						</li>
 						<li class="team__item team__list--active">
-							<h3 class="team__title"> Дэниэл Редклиф</h3>
+							<h3 class="team__title "> Дэниэл Редклиф</h3>
 							<div class="team__info">	
 								<div class="team__photo">
 									<img class="team__img" src="../img/team.png" alt="Photo">	
@@ -111,7 +120,7 @@
 								</div>
 							</div>
 						</li>
-						<li class="team__item">
+						<li class="team__item ">
 							<h3 class="team__title"> Дэниэл Редклиф</h3>
 							<div class="team__info">	
 								<div class="team__photo">
@@ -126,31 +135,32 @@
 						
 					</ul>
 				</div>
+			</div>
 		</section>
 
 		<section class="section menu">
-			<h2 class="title title--menu">Меню</h2>
+			<h2 class="title title--menu ">Меню</h2>
 				<ul class="menu__container">
-					<li class="menu__list ">
+					<li class="menu__list  ">
 						<div class="menu__item" style="background-image: url(../img/meat_eat.jpg)">
-							<div class="menu__item__bg"></div>
-							<div class="text__rotate">Для мясоедов</div>
+							<div class="menu__item-bg"></div>
+							<div class="menu__text-rotate">Для мясоедов</div>
 						</div>
 						<div class="menu__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.
 						</div>
 					</li>
 					<li class="menu__list menu__list--active ">
-						<div class="menu__item " style="background-image: url(../img/vegan_eat.jpg)">
-							<div class="menu__item__bg"></div>
-							<div class="text__rotate">Вегетерианское</div>
+						<div class="menu__item  " style="background-image: url(../img/vegan_eat.jpg)">
+							<div class="menu__item-bg"></div>
+							<div class="menu__text-rotate">Вегетерианское</div>
 						</div>
 						<div class="menu__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.
 						</div>
 					</li>
 					<li class="menu__list ">
 						<div class="menu__item" style="background-image: url(../img/diet_eat.jpg)">
-							<div class="menu__item__bg"></div>
-							<div class="text__rotate">Диетическое</div>
+							<div class="menu__item-bg"></div>
+							<div class="menu__text-rotate">Диетическое</div>
 						</div>
 						<div class="menu__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.
 						</div>
@@ -159,6 +169,7 @@
 		</section>
 
 		<section class="section reviews">
+			<h2 class="title title-reviews">Отзывы</h2>
 			<ul class="reviews__list">
 				<li class="reviews__people" style="background-image: url(../img/people1.png)">
 					<div class="hide">
@@ -223,8 +234,8 @@
 			<div class="container">
 				<h2 class="title order--title">Закажите доставку</h2>
 				<form class="order__form" action="" method="post" name="order__form">
-					<div class="column">
-						<div class="row">
+					<div class="form__column">
+						<div class="form__row">
 							<label class="form__block">
 								<div>Имя</div>
 								<input type="text" class="form__input">
@@ -234,13 +245,13 @@
 								<input type="text" class="form__input">
 							</label>
 						</div>
-						<div class="row">
+						<div class="form__row">
 							<label class="form__block">
 								<div>Улица</div>
 								<input type="text" class="form__input">
 							</label>
 						</div>
-						<div class="row ">
+						<div class="form__row ">
 							<label class="form__block">
 								<div>Дом</div>
 								<input type="text" class="form__input">
@@ -259,51 +270,53 @@
 							</label>
 						</div>
 					</div>
-					<div class="column">
+					<div class="form__column">
 						<div class="row">
 							<label class="form__block">
 								<div>Комментарий</div>
-							<textarea name="" id="" cols="60" rows="6" class="form__textarea">asdasdasdad</textarea>
+							<textarea name="" id="" cols="60" rows="6" class="form__textarea"></textarea>
 						</label>
 						</div>
-						<div class="row">
-							<label class="form__block">
-								<input type="radio" name="money" >Потребуется сдача
+						<div class="form__row">
+							<label class="form__block form__block--radio">
+								<input class="form__input--radio" type="radio" name="money" >Потребуется сдача
 							</label>
-						<label class="form__block">
-							<input type="radio" name="money" >Оплата картой
+						<label class="form__block form__block--radio">
+							<input class="form__input--radio" type="radio" name="money" >Оплата картой
+
 						</label>
 						</div>
-						<div class="row">
+						<div class="form__row form__input--order">
 							<label class="form__block">
-								<input type="checkbox">Не перезванивать
+								<input class="form__input " type="checkbox">Не перезванивать
 							</label>
 						</div>
-						<div class="row">
-							<a href="" class="button button--order">Заказать</a>
-							<div class="clear">Очистить</div>
+						<div class="form__row">
+							<button class="button button--order" type="submit">Заказать</button>
+							<button class="clear" type="reset">Очистить</button>
 						</div>
 					</div>
 			</form>
 		</section>
 
-		<footer class=" contacts">
+		<section class="contacts">
+			<h2 class="title title-contacts"> Контакты</h2>
 			<div class="contacts__map"> 
-				<img class="map__img" src="../img/map.jpg" alt="Карта">
+				<img class="contacts__img" src="../img/map.jpg" alt="Карта">
 			</div>
-			<div class="contacts__info">
-				<div class="contacts__left">
-					<p class="left__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</p>
-					<p class="left__phone"><img class="phone__icons" src="../icons/phone.svg" alt="">  +7 (812) 377-13-77</p>
+			<footer class="contacts__footer footer">
+				<div class="footer__info">
+					<p class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</p>
+					<p class="footer__phone"><img class="phone__icons" src="../icons/phone.svg" alt="">  +7 (812) 377-13-77</p>
 				</div>
-				<div class="social__right">
-					<a href="#" class="social__link social__vk"><img class="social__img" src="../icons/vk.svg" alt=""></a>
-					<a href="#" class="social__link social__fb"><img class="social__img" src="../icons/fb.svg" alt=""></a>
-					<a href="#" class="social__link social__ig"><img class="social__img" src="../icons/inst.svg" alt=""></a>
-					<a href="#" class="social__link social__tw"><img class="social__img" src="../icons/twitter.svg" alt=""></a>
+				<div class="footer__social social">
+					<a href="#" class="social__link social__link--vk"><img class="social__img" src="../icons/vk.svg" alt=""></a>
+					<a href="#" class="social__link social__link--fb"><img class="social__img" src="../icons/fb.svg" alt=""></a>
+					<a href="#" class="social__link social__link--inst"><img class="social__img" src="../icons/inst.svg" alt=""></a>
+					<a href="#" class="social__link social__link--tw"><img class="social__img" src="../icons/twitter.svg" alt=""></a>
 				</div>
-			</div>
-		</footer>
+			</footer>
+		</section>
 
 	</div>
 
