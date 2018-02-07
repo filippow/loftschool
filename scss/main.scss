@@ -1,5 +1,5 @@
 //	RESOLUTION
-$tablets:768px;
+$tablets:769px;
 $phones:480px;
 
 
@@ -30,15 +30,14 @@ $phones:480px;
 .navigat {
 	list-style:none;
 	position:fixed;
-	right:rem(153px);
-	top:rem(90px);
+	right:rem(113px);
+	top:rem(91px);
 	margin: 0;
 	padding: 0;
 	width: rem(40px);
 	z-index:1000;
 	@include tablets() {
-		right:rem(53px);
-		top:rem(100px);
+		display:none;
 
 	}
 	.navigat__active {
@@ -72,7 +71,7 @@ $phones:480px;
 .navigat__item {
 	width:rem(10px);
 	height: rem(10px);
-	margin-bottom:rem(11px);
+	margin-bottom:rem(12px);
 	position: relative;
 	display:block;
 	@include tablets() {

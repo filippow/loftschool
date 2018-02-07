@@ -1,7 +1,7 @@
 .reviews {
 	background:black;
 }
-.title-reviews {
+.reviews__title {
 	position:absolute;
 	left:40%;
 	visibility: hidden;
@@ -35,6 +35,8 @@
 	padding-top:rem(1px);
 	@include tablets() {
 		text-align:center;
+		padding-top: 2%;
+
 	}
 
 	p {
@@ -45,11 +47,9 @@
 		font-family: Ubuntu,Arial;
 		font-weight: light;
 		@include tablets() {
-			padding:rem(10px);
-
-			font-size: rem(14px);
-			line-height:rem(17px);
-			margin-top:0;
+			padding: 4% 11% 0% 11%;
+   			padding-top: 4%;
+    		line-height: 1.4rem;
 		}
 		@include phones() {
 			display:none;
@@ -64,11 +64,13 @@
 		margin-top:rem(25px);
 		padding-left: rem(20px);
 		@include phones() {
-			margin-top:0;
+			padding-top: 3%;
 		}	
 		@include phones() {
 			margin-top:rem(20px);
 			font-size: rem(24px);
+		    margin-bottom: 16%;
+    		padding: 0 14%;
 		}
 	}
 .button--hide {
@@ -77,6 +79,7 @@
 	@include tablets() {
 		transform:scale(0.75);
 		margin-left:0px;
+		padding: 3% 9%;
 	}
 	@include phones() {
 		transform:scale(1.1);

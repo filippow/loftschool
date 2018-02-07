@@ -4,19 +4,20 @@
 	background: url("../img/bg-form.jpg") center center no-repeat;
 	background-size:cover;
 }
-.order--title {
+.order__title {
 		padding-top:rem(120px);
 	@include tablets() {
-		padding-top:rem(50px);
+		padding: 17% 0 4% 0;
 		font-size:rem(72px);
 	}
 	@include phones() {
-		font-size: rem(30px);
-		padding-top:rem(20px);
+		font-size: 3.8rem;
+    	padding-top: 10%;
+    	padding-bottom: 1%;
 	}
 }
 .order__form {
-	margin-top:15px;
+	margin-top:22px;
 	margin-right:5px;
 	display:flex;
 	flex-wrap:wrap;
@@ -35,7 +36,7 @@
 		width:65%;
 	}
 	@include phones() {
-			width: 85%;
+			width: 100%;
 			margin: 0;
 			flex-direction:column;
 			display:flex;
@@ -49,8 +50,15 @@
 		justify-content:space-around;
 	}
 }
+.form__row--inputs {
+	width:70%;
+	@include phones() {
+		width: 80%;
+		margin-left:15%;
+	}
+}
 .form__block {
-	padding:15px 0 10px 0;
+	padding:15px 4px 10px 8px;
 	margin-right:25px;
 	flex:1;
 	display:inline-block;
@@ -58,16 +66,32 @@
 	font-size:14px;
 	text-align:left;
 }
+.form__block--comment {
+	margin-left:-3px;
+	width:98%;
+	@include phones() {
+		width:96%;
+	}
+}
 .form__input {
 	width:100%;
 	padding:8px;
 	@include phones() {
-		padding:5px;
+		padding: 9px;
+    	padding-right: 0px;
 	}
 }
 .form__input--order {
 	width:100%;
-	padding: 8px;
+	@include phones() {
+		padding: 4% 0% 0% 34%;
+	}
+}
+.form__input--radio {
+	margin-right:5px;
+}
+.form__call {
+	margin-right:5px;
 }
 .form__input, .form__textarea {
 	border-radius:5px;
@@ -92,7 +116,8 @@
 	margin-top:15px;
 	border:none;
 	@include phones() {
-		margin-top:5px;
+		margin:5% -66% 4% 0%;
+
 	}
 }
 .clear {

@@ -1,0 +1,246 @@
+.slider {
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(to bottom, #f9b43b 30%, #eb8d38 60%, #f9b43b 90%);
+	display:flex;
+	align-items:center;
+	justify-content:space-around;
+}
+.slider__container {
+	height:58%;
+	width:70%;
+	margin:0 -20% 0 -20%;
+	@include tablets() {
+		height:79%;
+		margin: 0px 5% 0 5%;
+	}
+	@include phones() {
+		width: 90%;
+    	margin: 0 0% 0 0;
+    	padding: 0;
+	}
+}
+.slider__item {
+	display:flex;
+	justify-content:space-around;
+	@include tablets() {
+		flex-direction:column;
+	}
+	@include phones() {
+		    width: 100%;
+	}
+}
+.slider__switch{
+	width: 50px;
+    margin-top: 5px;
+    text-align: center;
+    height: 50px;
+    display: inline-block;
+	margin-top:5%;
+	@include tablets() {
+		margin-top:-1%;
+	}
+	@include phones() {
+		margin: 0;
+    	margin-top: -7%;
+	}
+}
+.slider__switch--left {	
+	transform:rotate(90deg);
+	@include phones() {
+		    padding-top: 9%;
+	}
+}
+.slider__switch--right {
+	transform:rotate(-90deg);
+	@include phones() {
+		    padding-top: 9%;
+	}
+}
+
+.slider__link {
+	display:inline-block;
+}
+.slider__pictures {
+	position:relative;
+	height: 470px;	
+	margin-left:-30px;
+	padding-right:22px;
+	@include phones() {
+		margin: 0;
+    	padding: 0;
+    	height: 374px;
+	}
+}
+.slider__consist, .slider__kkal {
+	width: 90px;
+	height: 90px;
+	text-align:center;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	position:absolute;
+	
+}
+.slider__consist {
+	background: #f08c33;
+	 top: -2px;
+    left: 38px;
+	border-radius:5px;
+	left:5%;
+	@include tablets() {
+		top:3px;
+    	left: 61px
+	}
+	@include phones() {
+		top: -9%;
+    	left: -9%;
+	}
+}
+.slider__pic {
+	height:100%;
+	width: 100%;	
+}
+.slider__about {
+	font-size: 14px;
+	font-family: Gagalin, Arial;
+	text-transform: uppercase;
+	color:#fff;
+	line-height:30px;
+}
+.consist-info__img {
+	width: 42px;	
+	height: 46px;	
+}
+.consist-info {
+	position:absolute;
+	top: -1px;
+	margin-left:-1%;
+    left: 128px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	height: 330px;	
+	width: 270px;	
+	background: rgba(255,255,255,0.9);
+	border-radius:5px;
+
+	width: 0px;
+	overflow: hidden;
+	@include tablets() {
+		top: 4px;
+    	margin-left: 0;
+    	left: 152px;
+	}
+}
+.consist-info__item {
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	color:#2f3234;
+	font-family: Ubuntu, Arial;
+	font-size: 	14px;
+	font-weight: 	bold;
+	margin-bottom:8px;
+}
+.slider__burger {
+	margin-top:75px;
+	margin-left:-2px;
+	@include tablets() {
+		margin-left:38px;
+	}
+	@include tablets() {
+		    width: 100%;
+    margin-left: -1%;
+    margin-right: 0;
+	}
+}
+.slider__burger-img {
+	@include phones() {
+		width:100%;
+	}
+}
+.slider__kkal {
+	bottom: 3px;
+    left: 5%;
+    @include tablets() {
+    	left:81%;
+    	top: -2%;
+    	
+    }
+    @include phones() {
+    	top: -13%;
+    left: 88%;
+    }
+}
+.kkal__info {
+	position:relative;
+	opacity:0.7;
+	@include phones() {
+		    width: 100%;
+	}
+}
+.kkal__info-container {
+	position:absolute;
+	top:40%;
+	left:35%;
+}
+.slider__title {
+	color: #fff;
+	text-align: left;
+	margin-top:40px;
+	line-height:70px;
+	@include tablets() {
+		    width: 77%;
+    text-align: center;
+        margin: -8% 0px 0 11%
+	}
+	@include phones() {
+		    font-size: 3.5rem;
+    line-height: 3.3rem;
+    margin-top: -3%;
+	}
+}
+.slider__description {
+	font-family: Ubuntu, Arial;
+	font-weight: light;
+	font-size: 14px;
+	color:#fff;
+	line-height: 	24px;
+	padding-top:40px;
+	padding-bottom:7px;
+	@include tablets() {
+		padding-bottom: 4%;
+	}
+	@include phones() {
+		padding-top: 8%;
+    padding-bottom: 7px;
+    width: 100%;
+	}
+}
+.slider__title--red {
+	color:#e35028;
+	@include tablets() {
+		    padding-left: 21%;
+	}
+	@include phones() {
+		padding-left: 14%;
+    font-size: 3.5rem;
+	}
+}
+.slider__ruble {
+	color:#e35028;
+	font-size:30px;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: Gagalin, Arial;
+	@include phones() {
+		    margin-right: 1%;
+	}
+}
+.button--order {
+	margin-left:21px;
+	margin-top:-13px;
+}
+
+
