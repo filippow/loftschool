@@ -65,6 +65,7 @@
 }
 .team-acco__item {
 	margin-top:rem(30px);
+		transition:1s ;
 	@include tablets() {
     margin: 0 0 0 0;
     padding: 0;
@@ -119,13 +120,15 @@
 }
 .team__info {
 	justify-content:space-between;
-	display:none;
+	height: 0;	
+	overflow:hidden;
 	margin:17px 0 0 0;
+	transition:1s;
 	@include tablets() {
 		margin:0 0 0 0;
 	}
 	@include phones() {
-		height: 199px;
+
 	}
 }
 .team__photo {
@@ -189,10 +192,11 @@
 	}
 }
 .team-acco__item--active {
+			
 	@include tablets() {
 		margin:0 0 0 0;
 		width: 100%;
-		height: 71%;
+		min-height: 71%;
 		display:flex;
 		flex-direction:column;
 		align-items:center;
@@ -200,7 +204,7 @@
 	@include phones() {
 		margin: 0 0 0px 0;
     	width: 100%;
-    	height: 82%;
+    	height: 81%;
 	}
 	.team__title {
 		color:#f9b43b;
@@ -210,13 +214,20 @@
 		}
 	}
 	.team__info {
+			transition:1s ;
 		display:flex;
-		width: 100%;	
+		width: 100%;
+		height:120px;	
+
 		@include tablets() {
+			transition:1s;
 			flex-direction:column;
 			align-items:center;
 			margin-top: 2% 3% 0 0;
-	    	height: 199px;
+	    	height: 220px;
+		}
+		@include phones() {
+			height:65%;
 		}
 	}
 	.team__title {

@@ -27,10 +27,14 @@
 	color:#fff;
 }
 .menu__list {
+	transition:.5s;
+	cursor:pointer;
 	display:inline-block;
 	width:80px;
 	position:relative;
 	box-sizing:border-box;
+
+	
 	@include tablets() {
 		width:70px;
 	}	
@@ -43,7 +47,9 @@
 	
 }
 .menu__list--active {
+	transition:.5s;
 	width:80px+540px;
+
 	@include tablets() {
 		
 		width: 82%;
@@ -54,10 +60,12 @@
     	width: 71%;
 	}
 	.menu__info {
+			transition:.5s;
 		width: 540px;
     	padding: 9% 6% 6% 6%;
     	padding-top: 9%;
 		line-height:25px;
+		
 		@include tablets() {
 			width:100%;
 			padding: 9% 6% 6% 19%;
@@ -76,6 +84,7 @@
 	}
 }
 .menu__item {
+	
 	position:absolute;
 	left:0;
 	top:0;
@@ -103,6 +112,8 @@
 	height: 100%;
 }
 .menu__info {
+	transition:.5s;
+
 	display:inline-block;
 	overflow: hidden;
 	position:absolute;
