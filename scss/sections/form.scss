@@ -51,7 +51,7 @@
 	}
 }
 .form__row--inputs {
-	width:70%;
+	width:85%;
 	@include phones() {
 		width: 80%;
 		margin-left:15%;
@@ -66,9 +66,15 @@
 	font-size:14px;
 	text-align:left;
 }
+.form__block:last-child {
+	@include tablets() {
+		margin-right:0;
+	}
+}
 .form__block--comment {
 	margin-left:-3px;
 	width:98%;
+	margin-right:0px;
 	@include phones() {
 		width:96%;
 	}
@@ -85,6 +91,7 @@
 	width:100%;
 	@include phones() {
 		padding: 4% 0% 0% 34%;
+		width:43%;
 	}
 }
 .form__input--radio {
@@ -116,7 +123,7 @@
 	margin-top:15px;
 	border:none;
 	@include phones() {
-		margin:5% -66% 4% 0%;
+		margin:5% 0% 4% 0%;
 
 	}
 }
@@ -124,11 +131,59 @@
 	display:inline-block;
 	cursor:pointer;
 	margin:15px 0 0 20px;
+	margin-left:10%;
 	padding:5px;
 	cursor:pointer;
 	background: none;
 	border:none;
 	@include phones() {
 		margin-top:5px;
+		margin-left:-25%;
 	}
+}
+.radio, .checkbox {
+	display: none;
+}
+.radio-custom, .checkbox-custom {
+	width: 16px;
+	height: 16px;
+	position: relative;
+ 	background:white;
+}
+
+.radio-custom, .checkbox-custom, 
+.label {
+	display: inline-block;
+	vertical-align: middle;
+	cursor:pointer;
+}
+
+.checkbox:checked + .checkbox-custom::before {
+	content: "";             /* Добавляем наш псевдоэлемент */
+	display: block;			 /* Делаем его блочным элементом */
+	position: absolute;      /* Позиционируем его абсолютным образом */
+	top:3px;
+	left:2px;
+	right:3px;
+	bottom:3px;
+	background: url("../img/check.png"); 
+	background-repeat:no-repeat;   
+	background-size: cover;
+	border-radius: 2px;
+}
+
+.radio:checked + .radio-custom::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	bottom: 4px;
+	left: 4px;
+	background: #e35028;
+	border-radius: 2px;
+}
+.radio-custom,
+.radio:checked + .radio-custom::before {
+	border-radius: 50%;
 }

@@ -8,6 +8,7 @@
 	<title>Бургеры</title>
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/normalize.css"> 
+	
 </head>
 <body>
 	<div class="wrapper">
@@ -19,12 +20,12 @@
 					</div>
 					<nav class="nav">
 						<ul class="nav__list">
-							<li class="nav__item">О нас</li>
-							<li class="nav__item">Бургеры</li>
-							<li class="nav__item">Команда</li>
-							<li class="nav__item">Меню</li>
-							<li class="nav__item">Отзывы</li>
-							<li class="nav__item">Контакты</li>
+							<li class="nav__item"><a class="nav__link" href="#webest">О нас</a></li>
+							<li class="nav__item"><a class="nav__link" href="#slider">Бургеры</a></li>
+							<li class="nav__item"><a class="nav__link" href="#tram">Команда</a></li>
+							<li class="nav__item"><a class="nav__link" href="#menu">Меню</a></li>
+							<li class="nav__item"><a class="nav__link" href="#reviews">Отзывы</a></li>
+							<li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
 						</ul>
 					</nav>
 					<a class="button header__button" href="#">Заказать</a>
@@ -62,18 +63,17 @@
 			</div>
 			<div class="under-menu__content">
 				<ul class="under-menu__list">
-					<li class="under-menu__item"><a href="#">О нас</a></li>
-					<li class="under-menu__item"><a href="#">Бургеры</a></li>
-					<li class="under-menu__item"><a href="#">Команда</a></li>
-					<li class="under-menu__item"><a href="#">Меню</a></li>
-					<li class="under-menu__item"><a href="#">Отзывы</a></li>
-					<li class="under-menu__item"><a href="#">Контакты</a></li>
+					<li class="under-menu__item"><a class="under-menu__link" href="#webest">О нас</a></li>
+					<li class="under-menu__item"><a class="under-menu__link" href="#slider">Бургеры</a></li>
+					<li class="under-menu__item"><a class="under-menu__link" href="#team">Команда</a></li>
+					<li class="under-menu__item"><a class="under-menu__link" href="#menu">Меню</a></li>
+					<li class="under-menu__item"><a class="under-menu__link" href="#reviews">Отзывы</a></li>
+					<li class="under-menu__item"><a class="under-menu__link" href="#contacts">Контакты</a></li>
 				</ul>
 			</div>
-			
 		</section>
 
-		<section class="section webest">
+		<section class="section webest" id="webest">
 			<div class="container">
 				<h2 class="title title--black">Мы лучшие</h2>
 				<ul class="description">
@@ -103,7 +103,7 @@
 		</section>
 
 		
-		<section class="section slider">
+		<section class="section slider" id="slider">
 			<div class="slider__switch slider__switch--left">
 				<a class="slider__link" href=""><img src="../icons/arrow-scroll.svg" alt="scroll-left"></a>
 				</div>
@@ -185,7 +185,7 @@
 
 
 
-		<section class="section team">
+		<section class="section team" id="team">
 			<div class="team__container ">
 				<div class="team__content ">
 					<h2 class="title title--team-position">Команда</h2>
@@ -244,7 +244,7 @@
 			</div>
 		</section>
 
-		<section class="section menu">
+		<section class="section menu" id="menu">
 			<h2 class="title title--menu ">Меню</h2>
 				<ul class="menu__container">
 					<li class="menu__list  ">
@@ -274,7 +274,7 @@
 				</ul>
 		</section>
 
-		<section class="section reviews">
+		<section class="section reviews" id="reviews">
 			<h2 class="title reviews__title">Отзывы</h2>
 			<ul class="reviews__list">
 				<li class="reviews__people" style="background-image: url(../img/people1.png)">
@@ -336,7 +336,7 @@
 			</ul>
 		</section>
 
-		<section class="section order">
+		<section class="section order" id="order">
 			<div class="container">
 				<h2 class="title order__title">Закажите доставку</h2>
 				<form class="form order__form" action="" method="post" name="order__form">
@@ -385,17 +385,22 @@
 						</div>
 						<div class="form__row form__row--inputs">
 							<label class="form__block form__block--radio">
-								<input class="form__input--radio" type="radio" name="money" >Потребуется сдача
-							</label>
-						<label class="form__block form__block--radio">
-							<input class="form__input--radio" type="radio" name="money" >Оплата картой
-
-						</label>
+                    			<input class="radio" type="radio" name="radio-test">
+                    			<span class="radio-custom"></span>
+                    			<span class="label">Потребуется сдача</span>
+                			</label>
+                 			<label class="form__block form__block--radio">
+                    			<input class="radio" type="radio" name="radio-test">
+                    			<span class="radio-custom"></span>
+                    			<span class="label">Оплата по карте</span>
+                			</label>
 						</div>
 						<div class="form__row form__input--order">
-							<label class="form__block">
-								<input class="form__call" type="checkbox">Не перезванивать
-							</label>
+							 <label class="form__block">
+                    			<input class="checkbox form__call" type="checkbox" name="checkbox-test">
+                    			<span class="checkbox-custom"></span>
+                    			<span class="label">Не перезванивать</span>
+                			</label>
 						</div>
 						<div class="form__row">
 							<button class="button button--order" type="submit">Заказать</button>
@@ -405,10 +410,10 @@
 			</form>
 		</section>
 
-		<section class="section contacts">
+		<section  class="section contacts" id="contacts">
 			<h2 class="title contacts__title"> Контакты</h2>
-			<div class="contacts__map"> 
-				<img class="contacts__img" src="../img/map.jpg" alt="Карта">
+			<div  id="map" class="contacts__map"> 
+				
 			</div>
 			<footer class="contacts__footer footer">
 				<div class="footer__info">
@@ -424,19 +429,57 @@
 			</footer>
 		</section>
 
+
+
+
+
+
+
+
+
+	<!--	<section class="testing">	
+			<div class="test-container">
+  				
+  				<div class="test__slider">	
+	  				<ul class="test">
+	    				<li class="test__item yellow">Slide 1</li>
+	    				<li class="test__item red">Slide 2</li>
+	    				<li class="test__item blue">Slide 3</li>
+	    				<li class="test__item crimson">Slide 4</li>
+	  				</ul>
+	  				<div class="test__controls">
+	  					<a href="" class="btn btn--prev">Prev</a>
+	  					<a href="" class="btn btn--next">Next</a>
+	  				</div>
+	  			</div>
+	  			
+  				
+				</div>
+
+		</section>
+
+
+-->
+
+
+
+
 	</div>
 
 	<ul class="navigat">
-		<li class="navigat__item navigat__active"><a class="navigat__link " href="#"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#"></a></li>
+		<li class="navigat__item navigat__item--active"><a class="navigat__link " href="#"></a></li>
+		<li class="navigat__item "><a class="navigat__link" href="#webest"></a></li>
+		<li class="navigat__item "><a class="navigat__link" href="#slider"></a></li>
+		<li class="navigat__item "><a class="navigat__link" href="#team"></a></li>
+		<li class="navigat__item "><a class="navigat__link" href="#menu"></a></li>
+		<li class="navigat__item "><a class="navigat__link" href="#reviews"></a></li>
+		<li class="navigat__item "><a class="navigat__link" href="#order"></a></li>
+		<li class="navigat__item "><a class="navigat__link" href="#contacts"></a></li>
 
 		<script type="text/javascript" src="../js/slider.js"></script>
 	</ul>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
+	<script src="../js/map.js"></script>
 </body>
 </html>

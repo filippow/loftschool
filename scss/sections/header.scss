@@ -33,6 +33,14 @@
 .logo {
 	margin-right: auto;
 	margin-left:-18px;
+	@include tablets() {
+		margin: -30px 0px 0 19px;
+   		margin-right: auto;
+	}
+	@include phones() {
+		margin: 12px 0px 0 -17px;
+    	margin-right: auto;
+	}
 }
 
 .nav__list  {
@@ -68,10 +76,17 @@
 		}
 	}
 }
+.nav__link {
+	color:white;
+	text-decoration: none;
+}
 .header__button {
 	margin-right:-5px;
 	@include tablets() {
-		margin-right:36px
+		margin: -35px 39px 0 0;
+	}
+	@include phones() {
+		margin: 0px 40px 0 0;
 	}
 }
 .gamburger {
@@ -85,10 +100,10 @@
 	width: 0;
 	@include tablets() {
 		width: 23px;
-		    margin-right: 47px;
+		 margin: -35px 30px 0 0;
 	}
 	@include phones() {
-		margin-right:20px;
+		    margin: 0px 20px 0 0;
 	}
 }
 .gamburger__item {
@@ -116,14 +131,15 @@
 	width: 50%;
 	margin-top:7%;
 	@include tablets() {
-	margin: 123px 38px 0 0;
+	margin: 123px 0px 0 0;
     width: 60%
 	}
 	@include phones() {
 	height: 50%;
-    width: 95%;
-    margin-top: 12%;
-    margin-left: 28%;
+    width: 77%;
+    padding-top: 11%;
+    margin: 0;
+    text-align: center;
 	}
 }
 .header__img {
@@ -134,7 +150,7 @@
 	}
 	@include phones() {
 		margin-top:0%;	
-    	width: 80%;
+    	width: 92%;
 	}
 }
 .header__right {
@@ -142,11 +158,13 @@
 	@include tablets() {
 		width: 70%;
 		margin-bottom:40px;
+		padding: 10px 0 0 0;
+    	height: 40%;
 	}
 	@include phones() {
 		width: 100%;
 		height: 50%;
-		margin-top:19%;
+		margin-top:15%;
 	}
 }
 .title--header {
@@ -180,6 +198,7 @@
 	@include phones() {
 		font-size:3.5rem;
 		margin-top: -1%;
+
 	}
 }
 .arrows {
@@ -192,17 +211,19 @@
 		cursor:pointer;
 	}
 	@include tablets() {
-		
+		    margin-bottom: 0;
+    height: 3%;
 	}
 	@include phones() {
 		margin-bottom:15px;
 	}
 }
-
+////////////////////////////////////////////////////////
 
 .under-menu {
-	height: 100vh;
-	width: 100%;
+	height:100vh;
+	overflow: hidden;
+	width: 100vw;
 	position:fixed;
 	top:0;
 	left:0;
@@ -212,8 +233,6 @@
 	flex-direction:column;
 	align-items:center;
 	justify-content:space-between;
-	
-	
 }
 .under-menu__nav {
 	
@@ -225,7 +244,7 @@
 
 }
 .under-menu__logo {
-	margin: 30px 0 0 -15px;
+	margin: 2px 0 0 -8px;
 }
 .under-menu__content {
 	
@@ -245,6 +264,11 @@
 .under-menu__item {
 	margin-top:30px;
 }
+.under-menu__link {
+	color:white;
+	text-decoration: none;
+
+}
 .under-menu__left, .under-menu__right {
 	display:inline-block;
 	border-radius:10px;
@@ -260,6 +284,13 @@
 	width: 40px;
 	height: 40px;
 	border-radius:2px;
+	@include tablets() {
+		margin: 0 -15px 0 0px;
+	}
+	@include phones() {
+		margin-top: 0px;
+    	margin-right: -13px;
+	}
 }
 .under-menu__left {
 	transform: rotate(45deg) translate(12px)
@@ -268,5 +299,5 @@
 	transform: rotate(-45deg) translate(12px)	
 }
 .not-visible {
-	z-index:-10000;
+	height: 0;	
 }

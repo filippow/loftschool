@@ -39,7 +39,7 @@
 		width:70px;
 	}	
 	@include phones() {
-		width:70px;
+		width:50px;
 	}
 }
 .menu__list:first-child {
@@ -57,7 +57,7 @@
 	}
 	@include phones() {
 		margin-left: 0px;
-    	width: 71%;
+    	width: 80%;
 	}
 	.menu__info {
 			transition:.5s;
@@ -76,11 +76,18 @@
 				margin:0;
 				width: 100%;
     			padding: 15px 10px 0 29%;
+    			overflow: hidden;
+    			height:100%
 
 		}
 	}
 	.menu__text-rotate {
 		color:#f9b43b;
+	}
+	.menu__item {
+		@include phones() {
+			width:50px;
+		}
 	}
 }
 .menu__item {
@@ -102,7 +109,7 @@
 		width:70px;
 	}
 	@include phones() {
-		width: 70px;	
+		width:100%;	
 	}
 }
 .menu__item-bg {

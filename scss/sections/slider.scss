@@ -42,19 +42,20 @@
 	}
 	@include phones() {
 		margin: 0;
-    	margin-top: -7%;
+    	padding-top:0;
+		height:25px;
 	}
 }
 .slider__switch--left {	
 	transform:rotate(90deg);
 	@include phones() {
-		    padding-top: 9%;
+		   
 	}
 }
 .slider__switch--right {
 	transform:rotate(-90deg);
 	@include phones() {
-		    padding-top: 9%;
+		   
 	}
 }
 
@@ -83,6 +84,7 @@
 	
 }
 .slider__consist {
+	cursor:pointer;
 	background: #f08c33;
 	 top: -2px;
     left: 38px;
@@ -121,7 +123,7 @@
 	flex-direction:column;
 	justify-content:center;
 	height: 330px;	
-	width: 270px;	
+	
 	background: rgba(255,255,255,0.9);
 	border-radius:5px;
 
@@ -132,6 +134,9 @@
     	margin-left: 0;
     	left: 152px;
 	}
+}
+.consist-info--visible {
+	width: 270px;
 }
 .consist-info__item {
 	display:flex;
@@ -146,13 +151,14 @@
 .slider__burger {
 	margin-top:75px;
 	margin-left:-2px;
-	@include tablets() {
-		margin-left:38px;
-	}
+	
 	@include tablets() {
 		    width: 100%;
-    margin-left: -1%;
     margin-right: 0;
+        margin-left: 7%;
+	}
+	@include phones() {
+		margin-left:0%;
 	}
 }
 .slider__burger-img {
@@ -169,8 +175,8 @@
     	
     }
     @include phones() {
-    	top: -13%;
-    left: 88%;
+    top: -9%;
+    left: 75%;
     }
 }
 .kkal__info {
@@ -244,3 +250,79 @@
 }
 
 
+
+
+
+
+
+//       *****************************************  testing
+
+.testing {
+	height:100vh;
+}
+
+.test-container {
+	  width:80%;
+	  height:300px;
+	  background:lightgray;
+	  margin-top:100px;
+	  margin-left:50px;
+	  position:relative;
+  
+}
+
+.test__slider {
+	position:relative;
+	overflow:hidden;
+}
+.test {
+  width:100%;
+  white-space: nowrap;
+  position:absolute;
+  top:0;
+  left:0;
+  font-size:0;
+}
+.btn {
+	top:0;
+	cursor:pointer;
+	z-index:2;
+	position:absolute;
+  width:40px;
+  height:100%;
+  border:1px solid blue;
+  text-decoration:none;
+  color:black;
+ 
+
+}
+.test__item {
+
+  width:600px;
+  height:300px;
+  display:inline-block;
+  box-sizing:border-box;
+ 
+ 
+}
+.btn--prev {
+	left:-10%;
+}
+.btn--next {
+	right:15%;
+}
+.red {
+	background: red;
+}
+.blue {
+	background: blue;
+}
+.crimson {
+	background: crimson;	
+}
+.green {
+	background: lightgreen;
+}
+.yellow {
+	background: yellow;
+}
