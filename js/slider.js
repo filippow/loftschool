@@ -60,11 +60,13 @@ for (var i=0; i<link.length; i++) {
 
 // Появление состава при нажатии на кнопку состав
 
-var consist = document.querySelector('.slider__consist');
-consist.addEventListener('click', function() {
- 	var show = document.querySelector('.consist-info');
- 	show.classList.toggle('consist-info--visible');
- });
+
+
+
+
+
+
+ 
 
 
 
@@ -88,49 +90,72 @@ for (var i=0; i<navigat.length; i++) {
 
 // ***********************		testing
 
-/*
 
-var prev = document.querySelector('.btn--prev');
-var next = document.querySelector('.btn--next');
-var prev = document.querySelector('.btn--prev');
-var sliders = document.querySelectorAll('.test__item');
 
-var current = 0;
+var prev = document.querySelector('.slider__button--left');
+var next = document.querySelector('.slider__button--right');
+var sliders = document.querySelectorAll('.slider__item');
+var sliderList = document.querySelector('.slider__list');
+var sliderContainer = document.querySelector('.slider__container');
+var size = parseInt(getComputedStyle(sliderContainer).width);
+var start = 1;
 
 
 
 next.addEventListener('click',function(e) {
 	e.preventDefault();
-	current++;
-	if (current>=sliders.length) {
-		current-=sliders.length;
-	}
-	show(current);
+	 var currentLeft = (parseInt(getComputedStyle(sliderList).left));
+ 	console.log(sliders.length);
+    if (start < sliders.length && currentLeft % size == 0) {        
+      sliderList.style.left = currentLeft - size + 'px';
+      start++;      
+      
+    } else if (currentLeft % size == 0) {
+      sliderList.style.left = currentLeft + (sliders.length-1) * size + 'px';
+      start = 1;      
+    }
   
 });
 	
 prev.addEventListener('click',function(e) {
 	e.preventDefault();
-	current--;
-    if (current<0) {
-		current=sliders.length-1;
-	}
-	show(current);
+	var currentLeft = (parseInt(getComputedStyle(sliderList).left));
+
+    if (start >1 && currentLeft % size == 0) {
+
+        sliderList.style.left = currentLeft + size + 'px';
+        start--;
+    
+    } else if (currentLeft % size == 0) {
+      sliderList.style.left = currentLeft- (sliders.length-1)*size + 'px';
+      start = sliders.length;     
+    }
 });
 
+var consist = document.querySelectorAll('.slider__consist');
+var show = document.querySelectorAll('.consist-info');
 
-function show(n) {
-		for (i=0; i<sliders.length; i++) {
-			if (i!==n) {
-				sliders[i].classList.remove('test__item--current');
-			}
-			else {
-				sliders[i].classList.add('test__item--current');
-			}
-		}
 
-}
+		consist[0].addEventListener('click',function() {
+				show[0].classList.toggle('consist-info--visible');
+	});
+		consist[1].addEventListener('click',function() {
+				show[1].classList.toggle('consist-info--visible');
+	});
+		consist[2].addEventListener('click',function() {
+				show[2].classList.toggle('consist-info--visible');
+	});
+		consist[3].addEventListener('click',function() {
+				show[3].classList.toggle('consist-info--visible');
+	});
+		
 
-*/
+window.addEventListener('resize', function() {  
+  size = parseInt(getComputedStyle(sliderContainer).width); 
+  // console.log("size: " + size);
+  // console.log("start: " + start);
+  // console.log(-size * start);
+  sliderList.style.left = -size * (start-1) + 'px';
+});
 
 
