@@ -10,7 +10,7 @@
 .reviews__list {
 	filter: grayscale(100%);
 	display:flex;
-		flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 .reviews__people {
 	height:50vh;
@@ -36,21 +36,20 @@
 	padding-top:rem(1px);
 	@include tablets() {
 		text-align:center;
-		padding-top: 2%;
-
+		padding-top: 1px;
 	}
 
 	p {
 		color:#fff;
-		padding:rem(20px) rem(40px) rem(20px) 0;
-		line-height:rem(30px);
-		padding-left: rem(20px);
+		line-height: 1.6rem;
+    	padding: 0 5% 0 9%;
+		font-size:14px;
 		font-family: Ubuntu,Arial;
 		font-weight: light;
 		@include tablets() {
-			padding: 4% 11% 0% 11%;
-   			padding-top: 4%;
-    		line-height: 1.4rem;
+    		padding: 0% 4% 0% 4%;
+    		margin: 0 0 0 0;
+    		line-height: 1.2rem;
 		}
 		@include phones() {
 			display:none;
@@ -63,15 +62,18 @@
 		font-weight: normal;
 		color:#fff;
 		margin-top:rem(25px);
-		padding-left: rem(20px);
-		@include phones() {
-			padding-top: 3%;
+		padding-left: 10%;
+		@include tablets() {
+		width: 100%;
+    	text-align: center;
+    	padding-left: 0;
+    	margin-top:5%;
 		}	
-		@include phones() {
-			margin-top:rem(20px);
+		@include phones() {			
 			font-size: rem(24px);
-		    margin-bottom: 16%;
-    		padding: 0 14%;
+    		margin: 0 0 0 0;
+    		text-align: center;
+    		padding: 7% 0 0 0;
 		}
 	}
 .button--hide {
@@ -84,8 +86,7 @@
 	}
 	@include phones() {
 		transform:scale(1.1);
-		margin-left:0px;
-		margin-top:5%;
+		margin-top: 17%;
 	}
 	&:hover {
 		background: darken(#2f3234,7%);
@@ -94,11 +95,7 @@
 .reviews__people {
 	background-size:cover;
 	background-repeat:no-repeat;
-
 	@include tablets() {
 		background-position: center center;
-			
-
 	}
-
 }

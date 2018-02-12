@@ -11,7 +11,7 @@
 	position:absolute;
 	right:0;
 	top:0;
-	width:48%;
+	width:49%;
 	height:100%;
 	z-index:10;
 	background: rgba(46,49,51,0.9);
@@ -24,11 +24,14 @@
 	}
 }
 .team__content { 
-	padding:rem(95px) 0 0 rem(80px);
+	padding: 11% 0 0 13%;
 	@include tablets() {
-	padding: 0;
-    margin: 13% 0 0 0;
-    height: 70%;
+		padding: 40% 0 0 0;
+    	height: 90%;
+    	align-items: center;
+	}
+	@include phones() {
+		    padding: 46% 0 0 0;
 	}
 }
 .title--team-position {
@@ -46,40 +49,34 @@
 	}
 }
 .team-acco {
-	margin:rem(5px) 0 0 rem(55px);
-	padding:10px;
+	padding: 0 0 0 10%;
+    margin: 7% 0 0 0;
 	height: 100%;	
 	@include tablets() {
-		width: 95%;
-		display:flex;
-		flex-direction:column;
-		align-items:center;	
-		height: 60%;
-		margin: 2% 0 0 0;
+
+    padding: 4% 0 0 0;
+    margin:0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 	}
 	@include phones() {
-		height: 77%;
-    margin: -2% 0 0 0;
-    padding:0;
-
+	
 	}
 }
 .team-acco__item {
-	margin-top:rem(30px);
-		transition:1s ;
+	margin: 0 0 3% 0;
+	transition:1s ;
 	@include tablets() {
-    margin: 0 0 0 0;
-    padding: 0;
-    width: 50%;
-    text-align: center;
-    height: 14%;
+    	width: 50%;
+    	margin: 0 0 3% 0;
+    	text-align: center
 	}
 	@include phones() {
-		    margin: 0 0 4px 0;
-    padding: 0;
-    width: 50%;
-    text-align: center;
-    height: 16%;
+		    margin: 0 0 4% 0;
+		    width: 85%;
+		    ;
 	}
 }
 .team__title {
@@ -93,14 +90,14 @@
 		color:#f9b43b;
 	}	
 	@include tablets() {
-		margin: rem(20px) 0 0 0;
-		padding: 0;
+		font-size: 1.6rem;
 		text-align: center;
 		display: inline-block;
-		font-size:1.6rem;
+		width: 230px;
 	}
 	@include phones() {
 		    
+    		
 
 	}
 }
@@ -114,62 +111,72 @@
 	border-top: rem(8px) solid #f9b43b;
 	
 	@include tablets() {
+		left: 0;
+   		top: 30%;
 		margin: 0;
 		padding: 0;
 		text-align: center;
 	}
-}
-.team__info {
-	justify-content:space-between;
-	height: 0;	
-	overflow:hidden;
-	margin:17px 0 0 0;
-	transition:1s;
-	@include tablets() {
-		margin:0 0 0 0;
-	}
 	@include phones() {
 
+	}
+}
+.team__info {
+	
+	height: 0px;	
+	overflow:hidden;
+	transition:1s;
+	display: flex;
+    flex-direction: row;
+    padding: 4% 0 0 0;
+	@include tablets() {
+		flex-direction: column;
+    	align-items: center;
+    	padding: 3% 0% 0% 0;
+	}
+	@include phones() {
+	padding: 3% 0% 0% 0;
 	}
 }
 .team__photo {
-	margin-right:rem(30px);
+	
 	border-radius: 50%;
 	overflow: hidden;
 	z-index:10;
-	width:rem(100px);
+	min-width:100px;
+	min-height:100px;
 	height:rem(100px);
+	margin: 0 4% 0 0;
 	@include tablets() {
-		margin: 6px 18px 0 0;
-		padding: 0;		
+		
 	}
 
 	@include phones() {
-	margin: 5px 18px 0 0;
-    padding: 0;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
+		margin: 0% 0 0 0;
+    	padding: 0% 0 0 0;
+    	min-width: 100px;
+    	min-height: 100px;
 	}
 }
+.team__img {
+	min-width:100px;
+	min-height:100px;
+}
 .team-acco__worker {
-	width:rem(240px);
+	
 	line-height:rem(20px);
 	margin-right:auto;
 	font-family:Ubuntu, Arial;
 	color:#fff;
 	font-size:rem(14px);
 	@include tablets() {
-		margin:rem(10px) 0 0 0;
-		text-align:center;
-		width: 50%;
+		    text-align: center;
+    margin: 5% 0 0 0;
 	}
 	@include phones() {
-	margin: 0.625rem 0 0 0;
-    text-align: center;
-    width: 59%;
-    height: 36%;
-    line-height: 20px;
+	
+    
+  
 	}
 }
 .worker__name {
@@ -177,61 +184,51 @@
 	font-family: Ubuntu, Arial;
 	font-size:16px;
 	@include tablets() {
-		text-align: center;
-		height:36px;
+		
 	}
 }
 .team-acco__worker p {
 	font-weight: 300;
-
+	width: 75%;
+    height: 85%;
+    margin: 0 0 0 0;
+    padding: 4% 0 0 0;
+    line-height: 23px;
 	@include tablets() {
 		text-align: center;
 		font-size:14px;
 		font-family: Ubuntu, Arial;
 		margin: 0% 0 1% 0;   
     	width: 100%;
+    	height: 70%;
 	}
 }
+
 .team-acco__item--active {
 			
 	@include tablets() {
-		margin:0 0 0 0;
-		width: 100%;
-		min-height: 71%;
-		display:flex;
-		flex-direction:column;
-		align-items:center;
+		
 	}
 	@include phones() {
-		margin: 0 0 0px 0;
-    	width: 100%;
-    	height: 81%;
+		
+	}
+	.team__info {
+		height: 132px;
+
+		@include tablets() {
+			height: 200px;
+		}
+		@include phones() {
+			
+		}
 	}
 	.team__title {
 		color:#f9b43b;
 		@include tablets() {
-			font-size: 1.6rem;
-    		height: 14%;
-		}
-	}
-	.team__info {
-			transition:1s ;
-		display:flex;
-		width: 100%;
-		height:120px;	
-
-		@include tablets() {
-			transition:1s;
-			flex-direction:column;
-			align-items:center;
 			
-	    	height: 220px;
-		}
-		@include phones() {
-			height:65%;
-			width: 80%;
 		}
 	}
+	
 	.team__title {
 		color:#f9b43b;
 		&:before {

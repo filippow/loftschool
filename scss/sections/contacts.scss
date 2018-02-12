@@ -24,7 +24,8 @@
 	background: black;
 	color:#fff;
 	display:flex;
-	justify-content:space-between;
+	justify-content:space-around;
+	align-items:center;
 	bottom:-3px;
 	left:0px;
 	@include phones() {
@@ -35,33 +36,37 @@
 	}
 }
 .footer__info {
-	margin-left:80px;
+	
 	font-family: Ubuntu, Arial;
 	font-size: 14px;
 	display:flex;
 	flex-direction:column;
-	justify-content:center;
+	justify-content:space-between;
+	margin-right: 32%;
 	@include tablets() {
-		margin-left:20px;
+		margin-right: 19%;
+    	margin-left: 4%;
+    	width: 50%;
 		line-height: 14px;
 	}
 	@include phones() {
 		margin: 0;
 		padding: 0;
 		text-align:center;
+		height: 71%;
+   		justify-content: center;
 	}
 }
 .footer__adress {
-	margin: 4px;
+	margin: 0 0 6px 0;
 }
 .footer__phone {
-	margin: 7px;
+	margin: 0px;
 	color:#e45028;
 	font-weight: bold;
 }
 .footer__social {
-	margin-right:70px;
-	margin-top:14px;
+
 
 	@include tablets() {
 		margin-right: 20px;
@@ -71,6 +76,7 @@
 		margin: 0;
 		padding: 0;
 		text-align:center;
+		margin-top: -2%;
 	}
 }
 
