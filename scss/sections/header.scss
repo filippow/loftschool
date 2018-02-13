@@ -248,7 +248,7 @@
 }
 .under-menu__content {
 	
-	height: 72%;
+	height: 79%;
 	width: 50%;
 }
 .under-menu__list {
@@ -262,8 +262,10 @@
 	
 }
 .under-menu__item {
-	margin-top:30px;
+	margin-top: 52px;
+	position:relative;
 }
+
 .under-menu__link {
 	color:white;
 	text-decoration: none;
@@ -300,4 +302,20 @@
 }
 .not-visible {
 	height: 0;	
+}
+.under-menu__item:before {
+	min-width: 2px;
+    min-height: 2px;
+    z-index: 100;
+    content: '';
+    padding: 3px;
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100%;
+}
+.under-menu__item:first-child:before {
+	display:none;
 }

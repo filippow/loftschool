@@ -569,7 +569,18 @@
 					<div class="hide">
 						<h3 class="hide__title ">Константин Спилберг</h3>
 						<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<a class="button button--hide"  href="#">Подробнее</a>
+						<a class="button button--hide" href="#openModal">Подробнее</a>
+<!--
+						<div id="openModal" class="modalDialog">
+   							<div>
+        						<a href="#close" title="Закрыть" class="close">X</a>
+        						<h2>Константин Спилберг</h2>
+        						<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+        						
+							</div>
+						</div>
+
+-->
 					</div>
 				</li>
 				<li class="reviews__people" style="background-image: url(../img/people2.png)">
@@ -625,7 +636,7 @@
 		</section>
 
 		<section class="section order" id="order">
-			<div class="container">
+			<div class="container container--form">
 				<h2 class="title order__title">Закажите доставку</h2>
 				<form class="form order__form" action="" method="post" name="order__form">
 					<div class="form__column">
@@ -664,11 +675,11 @@
 							</label>
 						</div>
 					</div>
-					<div class="form__column">
-						<div class="row">
+					<div class="form__column form__column--two">
+						<div class="form__row form__row--comment">
 							<label class="form__block form__block--comment">
 								<div>Комментарий</div>
-							<textarea name="" id="" cols="60" rows="6" class="form__textarea"></textarea>
+							<textarea name="" id=""  class="form__textarea"></textarea>
 						</label>
 						</div>
 						<div class="form__row form__row--inputs">
@@ -684,13 +695,13 @@
                 			</label>
 						</div>
 						<div class="form__row form__input--order">
-							 <label class="form__block">
+							 <label class="form__block form__block--order">
                     			<input class="checkbox form__call" type="checkbox" name="checkbox-test">
                     			<span class="checkbox-custom"></span>
                     			<span class="label">Не перезванивать</span>
                 			</label>
 						</div>
-						<div class="form__row">
+						<div class="form__row form__row--clear">
 							<button class="button button--order" type="submit">Заказать</button>
 							<button class="clear" type="reset">Очистить</button>
 						</div>

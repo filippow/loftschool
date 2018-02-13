@@ -36,10 +36,10 @@
 
 	
 	@include tablets() {
-		width:70px;
+		width:10%;
 	}	
 	@include phones() {
-		width:50px;
+		
 	}
 }
 .menu__list:hover .menu__text-rotate {
@@ -56,7 +56,7 @@
 
 	@include tablets() {
 		
-		width: 82%;
+		width: 80%;
     	margin-right: auto;
 	}
 	@include phones() {
@@ -71,17 +71,18 @@
 		line-height:25px;
 		
 		@include tablets() {
-			width:100%;
-			padding: 9% 6% 6% 19%;
+			width:87.5%;
+			padding: 9% 3% 6% 7%;
 			}
 			@include phones() {
 				line-height: 20px;
 				font-size: 	16px;
 				margin:0;
 				width: 100%;
-    			padding: 15px 10px 0 29%;
+    			padding: 9% 5% 6% 7%;
     			overflow: hidden;
-    			height:100%
+    			height:100%;
+    			width:85%;
 
 		}
 	}
@@ -90,13 +91,16 @@
 
 	}
 	.menu__item {
+		@include tablets() {
+			width:15%;
+		}
 		@include phones() {
-			width:50px;
+		
 		}
 	}
 }
 .menu__item {
-	
+	transition:0s;
 	position:absolute;
 	left:0;
 	top:0;
@@ -110,10 +114,10 @@
 	font-family: Gagalin, Arial;
 	z-index:1;
 	@include tablets() {
-		width:70px;
+		width:100%;
 	}
 	@include phones() {
-		width:100%;	
+	
 	}
 }
 .menu__item-bg {
@@ -155,6 +159,7 @@
 		
 	}
 	@include phones() {
-		font-size:2.5rem;
+		font-size: 2.0rem;
+    	left: 8%;
 	}
 }
