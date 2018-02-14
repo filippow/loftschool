@@ -164,18 +164,76 @@ window.addEventListener('resize', function() {
 
 
 
-//			Модальное окно отключение скролла
-/*
 
-document.addEventListener("DOMContentLoaded", function(){
-  var scrollbar = document.body.clientWidth - window.innerWidth + 'px';
-  console.log(scrollbar);
-  document.querySelector('[href="#openModal"]').addEventListener('click',function(){
-    document.body.style.overflow = 'hidden';
-    document.querySelector('#openModal').style.marginLeft = scrollbar;
-  });
-  document.querySelector('[href="#close"]').addEventListener('click',function(){
-    document.body.style.overflow = 'visible';
-    document.querySelector('#openModal').style.marginLeft = '0px';
-  });
-});*/
+
+
+//				Модальнео окно
+
+
+/*var size =0;
+window.addEventListener('resize', function() {  
+  var resize = window.innerWidth;
+
+
+})
+
+*/
+
+
+	var button = document.querySelectorAll('.button--hide');
+
+	for (var w=0; w<button.length; w++) {
+		button[w].addEventListener('click',function(e) {
+		e.preventDefault();
+		
+		if (window.innerWidth<=769) {
+
+		function overlayElement(title, content) {
+			var overlayElement = document.createElement('div');
+				overlayElement.classList.add('overlay');
+
+			var overlayContainer = document	.createElement('div');
+				overlayContainer.classList.add('overlay__container');
+
+			var overlayContent = document.createElement('div');
+				overlayContent.classList.add('overlay__content');
+
+			var overlayTitle = document.createElement('h2');
+				overlayTitle.classList.add('overlay__title');
+				overlayTitle.textContent = title;
+
+			var overlayDescr = document.createElement('p');
+				overlayDescr.classList.add('overlay__description');
+				overlayDescr.textContent = content;
+
+			var closeElement = document.createElement('a');
+				closeElement.classList.add('close');
+				closeElement.textContent="x";
+				closeElement.href="#";
+
+				closeElement.addEventListener('click',function(e) {
+					e.preventDefault();
+					document.body.removeChild(overlayElement);
+				});
+
+			overlayElement.appendChild(overlayContainer);
+			overlayContainer.appendChild(closeElement);
+			overlayContainer.appendChild(overlayContent);
+			overlayContent.appendChild(overlayTitle);
+			overlayContent.appendChild(overlayDescr);
+
+			return overlayElement;
+		}
+
+		var title =this.previousElementSibling.previousElementSibling.innerHTML;
+		var content	= this.previousElementSibling.innerHTML;
+
+		const overlay = overlayElement(title,content);
+		document.body.appendChild(overlay);
+		
+		}
+		})
+
+
+	}
+
