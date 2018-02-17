@@ -6,22 +6,38 @@
 	<meta name="viewport" content="	width=device-width, initial-scale=1">
 
 	<title>Бургеры</title>
+
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/normalize.css"> 
 	
 </head>
 <body>
 	<div class="wrapper">
-		
+	<div class="maincontent">
+		<header class="section header section--active">
 
+		<div class="under-menu not-visible	">
+			<div class="under-menu__nav">
+				<div class="under-menu__logo">
+					<img src="../icons/logo.svg" alt="">
+				</div>
+				<div class="under-menu__exit exit">
+					<div class="under-menu__left "></div>
+					<div class="under-menu__right "></div>
+				</div>
+			</div>
+			<div class="under-menu__content">
+				<ul class="under-menu__list">
+					<li class="under-menu__item"><a class="under-menu__link" href="#webest">О нас</a></li>
+					<li class="under-menu__item"><a class="under-menu__link" href="#slider">Бургеры</a></li>
+					<li class="under-menu__item"><a class="under-menu__link" href="#team">Команда</a></li>
+					<li class="under-menu__item"><a class="under-menu__link" href="#menu">Меню</a></li>
+					<li class="under-menu__item"><a class="under-menu__link" href="#reviews">Отзывы</a></li>
+					<li class="under-menu__item"><a class="under-menu__link" href="#contacts">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
 
-
-
-
-
-
-
-		<header class="section header">
 			<div class="container header__container">
 				<div class="header__nav">
 					<div class="logo">
@@ -29,15 +45,15 @@
 					</div>
 					<nav class="nav">
 						<ul class="nav__list">
-							<li class="nav__item"><a class="nav__link" href="#webest">О нас</a></li>
-							<li class="nav__item"><a class="nav__link" href="#slider">Бургеры</a></li>
-							<li class="nav__item"><a class="nav__link" href="#tram">Команда</a></li>
-							<li class="nav__item"><a class="nav__link" href="#menu">Меню</a></li>
-							<li class="nav__item"><a class="nav__link" href="#reviews">Отзывы</a></li>
-							<li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
+							<li class="nav__item"><a class="nav__link" data-scroll-to="1" href="">О нас</a></li>
+							<li class="nav__item"><a class="nav__link" data-scroll-to="2" href="">Бургеры</a></li>
+							<li class="nav__item"><a class="nav__link" data-scroll-to="3" href="">Команда</a></li>
+							<li class="nav__item"><a class="nav__link" data-scroll-to="4" href="">Меню</a></li>
+							<li class="nav__item"><a class="nav__link" data-scroll-to="5" href="">Отзывы</a></li>
+							<li class="nav__item"><a class="nav__link" data-scroll-to="7" href="">Контакты</a></li>
 						</ul>
 					</nav>
-					<a class="button header__button" href="#">Заказать</a>
+					<a class="button header__button" href="" data-scroll-to="6" >Заказать</a>
 					<div class="gamburger">
 						<div class="gamburger__item"></div>
 						<div class="gamburger__item"></div>
@@ -59,28 +75,6 @@
 				</div>
 			</div>
 		</header>
-
-		<section class="under-menu not-visible	">
-			<div class="under-menu__nav">
-				<div class="under-menu__logo">
-					<img src="../icons/logo.svg" alt="">
-				</div>
-				<div class="under-menu__exit exit">
-					<div class="under-menu__left "></div>
-					<div class="under-menu__right "></div>
-				</div>
-			</div>
-			<div class="under-menu__content">
-				<ul class="under-menu__list">
-					<li class="under-menu__item"><a class="under-menu__link" href="#webest">О нас</a></li>
-					<li class="under-menu__item"><a class="under-menu__link" href="#slider">Бургеры</a></li>
-					<li class="under-menu__item"><a class="under-menu__link" href="#team">Команда</a></li>
-					<li class="under-menu__item"><a class="under-menu__link" href="#menu">Меню</a></li>
-					<li class="under-menu__item"><a class="under-menu__link" href="#reviews">Отзывы</a></li>
-					<li class="under-menu__item"><a class="under-menu__link" href="#contacts">Контакты</a></li>
-				</ul>
-			</div>
-		</section>
 
 		<section class="section webest" id="webest">
 			<div class="container">
@@ -111,7 +105,7 @@
 			</div>
 		</section>
 		
-	<section class="slider">
+		<section class="section slider">
 		<div class="slider-wrap">	
 			<a class="slider__button slider__button--left" href="#"><img class="slider__img slider__img--left" src="../icons/arrow-scroll.svg" alt=""></a>
 			<div class="slider__container">
@@ -178,7 +172,7 @@
 									<span class="title slider__title--red">500</span>
 									<span class="slider__ruble">рублей</span>
 									<span>
-										<button class="button button--order" type="submit">Заказать</button>
+										<button class="button button--slider" type="submit">Заказать</button>
 									</span>
 								</div>
 							</div>
@@ -246,7 +240,7 @@
 									<span class="title slider__title--red">500</span>
 									<span class="slider__ruble">рублей</span>
 									<span>
-										<button class="button button--order" type="submit">Заказать</button>
+										<button class="button button--slider" type="submit">Заказать</button>
 									</span>
 								</div>
 							</div>
@@ -314,7 +308,7 @@
 									<span class="title slider__title--red">500</span>
 									<span class="slider__ruble">рублей</span>
 									<span>
-										<button class="button button--order" type="submit">Заказать</button>
+										<button class="button button--slider" type="submit">Заказать</button>
 									</span>
 								</div>
 							</div>
@@ -382,7 +376,7 @@
 									<span class="title slider__title--red">500</span>
 									<span class="slider__ruble">рублей</span>
 									<span>
-										<button class="button button--order" type="submit">Заказать</button>
+										<button class="button button--slider" type="submit">Заказать</button>
 									</span>
 								</div>
 							</div>
@@ -450,7 +444,7 @@
 									<span class="title slider__title--red">500</span>
 									<span class="slider__ruble">рублей</span>
 									<span>
-										<button class="button button--order" type="submit">Заказать</button>
+										<button class="button button--slider" type="submit">Заказать</button>
 									</span>
 								</div>
 							</div>
@@ -460,14 +454,7 @@
 			</div>
 			<a class="slider__button slider__button--right" href="#"><img class="slider__img slider__img--right" src="../icons/arrow-scroll.svg" alt=""></a>
 		</div>
-	</section>
-
-
-
-
-
-
-
+		</section>
 
 		<section class="section team" id="team">
 			<div class="team__container ">
@@ -521,12 +508,7 @@
 									<p>	С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
 								</div>
 							</div>
-						</li>
-
-						
-						
-						
-						
+						</li>											
 					</ul>
 				</div>
 			</div>
@@ -540,7 +522,10 @@
 							<div class="menu__item-bg"></div>
 							<div class="menu__text-rotate">Для мясоедов</div>
 						</div>
-						<div class="menu__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.
+						<div class="menu__info">
+							<div class="menu__content">	
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.
+							</div>
 						</div>
 					</li>
 					<li class="menu__list  menu__list--active">
@@ -548,7 +533,10 @@
 							<div class="menu__item-bg"></div>
 							<div class="menu__text-rotate">Вегетерианское</div>
 						</div>
-						<div class="menu__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.
+						<div class="menu__info">
+							<div class="menu__content">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.
+							</div>
 						</div>
 					</li>
 					<li class="menu__list ">
@@ -556,7 +544,10 @@
 							<div class="menu__item-bg"></div>
 							<div class="menu__text-rotate">Диетическое</div>
 						</div>
-						<div class="menu__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.
+						<div class="menu__info">
+							<div class="menu__content">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore fugiat natus, autem a dolore illum. Sit provident est perferendis in exercitationem libero, dolor incidunt facilis praesentium, iure dolorem! Labore, repellat. Porro corporis, blanditiis culpa expedita alias vel, dolores sint.
+							</div>
 						</div>
 					</li>
 				</ul>
@@ -570,18 +561,6 @@
 						<h3 class="hide__title ">Константин Спилберг</h3>
 						<p >Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 						<a class="button button--hide" href="#">Подробнее</a>
-<!--
-						<div  class="overlay">
-							<div class="overlay__container"
-								<a href="#" class="close">X</a>
-	   							<div class="overlay__content">
-	        						<h2 class="overlay__title">Константин Спилберг</h2>
-	        						<p class="overlay__description">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной.</p>
-								</div>
-							</div>
-						</div>
-
--->
 					</div>
 				</li>
 				<li class="reviews__people" style="background-image: url(../img/people2.png)">
@@ -639,65 +618,65 @@
 		<section class="section order" id="order">
 			<div class="container container--form">
 				<h2 class="title order__title">Закажите доставку</h2>
-				<form class="form order__form" action="" method="post" name="order__form">
+				<form class="form order__form" action="server.php" method="post" name="order__form" id="oredr__form">
 					<div class="form__column">
 						<div class="form__row">
 							<label class="form__block">
 								<div>Имя</div>
-								<input type="text" class="form__input">
+								<input type="text" class="form__input" name="user-name">
 							</label>
 							<label class="form__block">
 								<div>Телефон</div>
-								<input type="text" class="form__input">
+								<input type="text" class="form__input" name="user-phone">
 							</label>
 						</div>
 						<div class="form__row">
 							<label class="form__block">
 								<div>Улица</div>
-								<input type="text" class="form__input">
+								<input type="text" class="form__input" name="street">
 							</label>
 						</div>
 						<div class="form__row ">
 							<label class="form__block">
 								<div>Дом</div>
-								<input type="text" class="form__input">
+								<input type="text" class="form__input" name="house">
 							</label>
 							<label class="form__block">
 								<div>Корпус</div>
-								<input type="text" class="form__input">
+								<input type="text" class="form__input" name="buiding">
 							</label>
 							<label class="form__block">
 								<div>Квартира</div>
-								<input type="text" class="form__input">
+								<input type="text" class="form__input" name="apartment">
 							</label>
 							<label class="form__block">
 								<div>Этаж</div>
-								<input type="text" class="form__input">
+								<input type="text" class="form__input" name="floor">
 							</label>
 						</div>
 					</div>
 					<div class="form__column form__column--two">
 						<div class="form__row form__row--comment">
-							<label class="form__block form__block--comment">
+							<label class="form__block form__block--comment" >
 								<div>Комментарий</div>
-							<textarea name="" id=""  class="form__textarea"></textarea>
+							<textarea name="comment" id=""  class="form__textarea"></textarea>
 						</label>
 						</div>
 						<div class="form__row form__row--inputs">
 							<label class="form__block form__block--radio">
-                    			<input class="radio" type="radio" name="radio-test">
+                    			<input class="radio" type="radio" name="radio-test" value="Потребуется сдача">
                     			<span class="radio-custom"></span>
                     			<span class="label">Потребуется сдача</span>
                 			</label>
                  			<label class="form__block form__block--radio">
-                    			<input class="radio" type="radio" name="radio-test">
+                    			<input class="radio" type="radio" name="radio-test" value="Оплата по карте">
                     			<span class="radio-custom"></span>
                     			<span class="label">Оплата по карте</span>
                 			</label>
 						</div>
 						<div class="form__row form__input--order">
 							 <label class="form__block form__block--order">
-                    			<input class="checkbox form__call" type="checkbox" name="checkbox-test">
+                    			<input class="checkbox form__call" type="checkbox" name="dont-disturb">
                     			<span class="checkbox-custom"></span>
                     			<span class="label">Не перезванивать</span>
                 			</label>
@@ -716,6 +695,7 @@
 				
 			</div>
 			<footer class="contacts__footer footer">
+				<div class="footer__container">	
 				<div class="footer__info">
 					<p class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</p>
 					<p class="footer__phone"><img class="footer__icons" src="../icons/phone.svg" alt="">  +7 (812) 377-13-77</p>
@@ -726,24 +706,34 @@
 					<a href="#" class="social__link social__link--inst"><img class="social__img" src="../icons/inst.svg" alt=""></a>
 					<a href="#" class="social__link social__link--tw"><img class="social__img" src="../icons/twitter.svg" alt=""></a>
 				</div>
+				</div>
 			</footer>
 		</section>
 	</div>
+	</div>
 
 	<ul class="navigat">
-		<li class="navigat__item navigat__item--active"><a class="navigat__link " href="#"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#webest"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#slider"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#team"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#menu"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#reviews"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#order"></a></li>
-		<li class="navigat__item "><a class="navigat__link" href="#contacts"></a></li>
+		<li class="navigat__item navigat__item--active"><a class="navigat__link " data-scroll-to="0" href=""></a></li>
+		<li class="navigat__item "><a class="navigat__link" data-scroll-to="1" href=""></a></li>
+		<li class="navigat__item "><a class="navigat__link" data-scroll-to="2" href=""></a></li>
+		<li class="navigat__item "><a class="navigat__link" data-scroll-to="3" href=""></a></li>
+		<li class="navigat__item "><a class="navigat__link" data-scroll-to="4" href=""></a></li>
+		<li class="navigat__item "><a class="navigat__link" data-scroll-to="5" href=""></a></li>
+		<li class="navigat__item "><a class="navigat__link" data-scroll-to="6" href=""></a></li>
+		<li class="navigat__item "><a class="navigat__link" data-scroll-to="7" href=""></a></li>
 
-		<script type="text/javascript" src="../js/slider.js"></script>
+		
 	</ul>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.touchSwipe.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/onepage.js"></script>
+	
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
     </script>
 	<script src="../js/map.js"></script>
+
+
 </body>
 </html>

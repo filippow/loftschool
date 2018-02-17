@@ -26,12 +26,12 @@
 .team__content { 
 	padding: 11% 0 0 13%;
 	@include tablets() {
-		padding: 40% 0 0 0;
-    	height: 90%;
+		padding: 0 0 0 0;
+    	height: auto;
     	align-items: center;
 	}
 	@include phones() {
-		    padding: 46% 0 0 0;
+		    padding: 0 0 0 0;
 	}
 }
 .title--team-position {

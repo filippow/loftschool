@@ -32,7 +32,8 @@
 }
 .logo {
 	margin-right: auto;
-	margin-left:-18px;
+	margin-top:1%;
+	margin-left:1%;
 	@include tablets() {
 		margin: -30px 0px 0 19px;
    		margin-right: auto;
@@ -56,7 +57,7 @@
 	font-size: rem(13px);
 	text-transform: uppercase;
 	align-items:center;
-	margin-right:23px;
+	margin-right: 19px;
 	&:hover {
 		text-decoration: underline;
 		cursor:pointer;
@@ -81,7 +82,7 @@
 	text-decoration: none;
 }
 .header__button {
-	margin-right:-5px;
+	margin-right:1%;
 	@include tablets() {
 		margin: -35px 39px 0 0;
 	}

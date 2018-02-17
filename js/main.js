@@ -5,13 +5,35 @@
  var acco2 = document.querySelectorAll(".menu__list"); 
  for (var i=0; i<acco2.length; i++) {
  	acco2[i].addEventListener('click',function(el) {
- 		for (var j=0; j<acco2.length; j++) {
- 			
- 			acco2[j].classList.remove('menu__list--active');
- 		}
+ 		
+ 		if (el.currentTarget.classList.contains('menu__list--active')) {
 
- 		el.currentTarget.classList.toggle('menu__list--active');
- 	
+ 			el.currentTarget.classList.remove('menu__list--active');
+ 		}
+ 		else {
+ 			for (var j=0; j<acco2.length; j++) {
+ 					acco2[j].classList.remove('menu__list--active');
+ 				}
+ 				el.currentTarget.classList.add('menu__list--active');
+ 		}
+ 		
+ 	});
+ }
+  var acco3 = document.querySelectorAll(".menu__item2"); 
+ for (var i=0; i<acco3.length; i++) {
+ 	acco3[i].addEventListener('click',function(el) {
+ 		
+ 		if (el.currentTarget.classList.contains('menu__item2--active')) {
+
+ 			el.currentTarget.classList.remove('menu__item2--active');
+ 		}
+ 		else {
+ 			for (var j=0; j<acco3.length; j++) {
+ 					acco3[j].classList.remove('menu__item2--active');
+ 				}
+ 				el.currentTarget.classList.add('menu__item2--active');
+ 		}
+ 		
  	});
  }
 
@@ -20,32 +42,34 @@
 var acco = document.querySelectorAll(".team-acco__item");
  for (var i=0; i<acco.length; i++) {
  	acco[i].addEventListener('click',function(e) {
- 		for (var j=0; j<acco.length; j++) {
- 		
- 			acco[j].classList.remove('team-acco__item--active');
+ 		if (e.currentTarget.classList.contains('team-acco__item--active')) {
+ 			
+ 			e.currentTarget.classList.remove('team-acco__item--active');
  		}
- 		e.currentTarget.classList.toggle('team-acco__item--active');
- 	
+ 		else {
+ 			for (var j=0; j<acco.length; j++) {
+ 					acco[j].classList.remove('team-acco__item--active');
+ 				}
+ 				e.currentTarget.classList.add('team-acco__item--active');
+ 		}
  	});
  }
-
 
 //При клике на гамбургер, для появления меню на планшете и телефоне
 
 var gamburger = document.querySelector('.gamburger');
-gamburger.addEventListener('click',function() {
-	var underMenu = document.querySelector('.under-menu');
-	underMenu.classList.remove('not-visible');
-});
-
+	gamburger.addEventListener('click',function() {
+		var underMenu = document.querySelector('.under-menu');
+			underMenu.classList.remove('not-visible');
+	});
 
 // При клике на меню на главном экране 
 
 var exit = document.querySelector('.exit');
-exit.addEventListener('click',function() {
-	var underMenu = document.querySelector('.under-menu');
-	underMenu.classList.add('not-visible');
-});
+	exit.addEventListener('click',function() {
+		var underMenu = document.querySelector('.under-menu');
+			underMenu.classList.add('not-visible');
+	});
 
 
 var link = document.querySelectorAll('.under-menu__item');
@@ -58,39 +82,8 @@ for (var i=0; i<link.length; i++) {
 }
 
 
-// Появление состава при нажатии на кнопку состав
 
-
-
-
-
-
-
- 
-
-
-
-//		Навигационная панель
-
-var navigat = document.querySelectorAll('.navigat__item');
-for (var i=0; i<navigat.length; i++) {
-		navigat[i].addEventListener('click', function(e) {
-			for (var j=0; j<navigat.length; j++) {
-				navigat[j].classList.remove('navigat__item--active');
-			}
-		e.currentTarget.classList.toggle('navigat__item--active');
-
-		});
-}
-
-
-
-
-
-
-// ***********************		testing
-
-
+//		Слайдер
 
 var prev = document.querySelector('.slider__button--left');
 var next = document.querySelector('.slider__button--right');
@@ -101,7 +94,6 @@ var size = parseInt(getComputedStyle(sliderContainer).width);
 var start = 1;
 
 
-
 next.addEventListener('click',function(e) {
 	e.preventDefault();
 	 var currentLeft = (parseInt(getComputedStyle(sliderList).left));
@@ -109,12 +101,11 @@ next.addEventListener('click',function(e) {
     if (start < sliders.length && currentLeft % size == 0) {        
       sliderList.style.left = currentLeft - size + 'px';
       start++;      
-      
-    } else if (currentLeft % size == 0) {
+    } 
+    else if (currentLeft % size == 0) {
       sliderList.style.left = currentLeft + (sliders.length-1) * size + 'px';
       start = 1;      
     }
-  
 });
 	
 prev.addEventListener('click',function(e) {
@@ -122,71 +113,49 @@ prev.addEventListener('click',function(e) {
 	var currentLeft = (parseInt(getComputedStyle(sliderList).left));
 
     if (start >1 && currentLeft % size == 0) {
-
         sliderList.style.left = currentLeft + size + 'px';
         start--;
-    
-    } else if (currentLeft % size == 0) {
+    } 
+    else if (currentLeft % size == 0) {
       sliderList.style.left = currentLeft- (sliders.length-1)*size + 'px';
       start = sliders.length;     
     }
 });
 
+// Появление состава при нажатии на кнопку состав
+
 var consist = document.querySelectorAll('.slider__consist');
 var show = document.querySelectorAll('.consist-info');
 
-
 		consist[0].addEventListener('click',function() {
 				show[0].classList.toggle('consist-info--visible');
+				consist[0].classList.toggle('slider__consist--red');
 	});
 		consist[1].addEventListener('click',function() {
 				show[1].classList.toggle('consist-info--visible');
+				consist[1].classList.toggle('slider__consist--red');
 	});
 		consist[2].addEventListener('click',function() {
 				show[2].classList.toggle('consist-info--visible');
+				consist[2].classList.toggle('slider__consist--red');
 	});
 		consist[3].addEventListener('click',function() {
 				show[3].classList.toggle('consist-info--visible');
+				consist[3].classList.toggle('slider__consist--red');
 	});
-		
 
 window.addEventListener('resize', function() {  
   size = parseInt(getComputedStyle(sliderContainer).width); 
-  // console.log("size: " + size);
-  // console.log("start: " + start);
-  // console.log(-size * start);
   sliderList.style.left = -size * (start-1) + 'px';
 });
 
-
-
-
-
-
-
-
-
-
 //				Модальнео окно
 
+var button = document.querySelectorAll('.button--hide');
 
-/*var size =0;
-window.addEventListener('resize', function() {  
-  var resize = window.innerWidth;
-
-
-})
-
-*/
-
-
-	var button = document.querySelectorAll('.button--hide');
-
-	for (var w=0; w<button.length; w++) {
-		button[w].addEventListener('click',function(e) {
-		e.preventDefault();
-		
-		if (window.innerWidth<=769) {
+for (var w=0; w<button.length; w++) {
+	button[w].addEventListener('click',function(e) {
+	e.preventDefault();
 
 		function overlayElement(title, content) {
 			var overlayElement = document.createElement('div');
@@ -230,10 +199,7 @@ window.addEventListener('resize', function() {
 
 		const overlay = overlayElement(title,content);
 		document.body.appendChild(overlay);
-		
-		}
-		})
-
-
-	}
+	
+	});
+}
 

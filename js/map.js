@@ -8,22 +8,14 @@ ymaps.ready(init);
             controls: []
         });
 
-
         myMap.behaviors.disable('scrollZoom');
-        //myMap.behaviors.disable('drag');
-
-
-
-		
-
-
 		var coords = [
     					[59.94554327989287,30.38935262114668], 
     					[59.91142323563909,30.50024587065841], 
     					[59.88693161784606,30.319658102103713], 
     					[59.97033574821672,30.315194906302924]
 					],
-
+					
     	myCollection = new ymaps.GeoObjectCollection({}, {
         	iconLayout: 'default#image',
         	iconImageHref: '../icons/map-marker.svg',
@@ -36,6 +28,4 @@ ymaps.ready(init);
 		}
 
 		myMap.geoObjects.add(myCollection);
-
-    
     }

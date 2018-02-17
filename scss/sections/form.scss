@@ -19,6 +19,10 @@
     	padding-top: 10%;
     	padding-bottom: 1%;
 	}
+	@include minphones() {
+		font-size: 3.0rem;
+    	padding-top: 10%;
+	}
 }
 .order__form {
 	display: flex;
@@ -161,6 +165,9 @@
 	@include tablets() {
 		    max-width: 35%;
     		margin: 0;
+	}
+	@include minphones() {
+		max-width:45%;
 	}
 }
 .form__block--order {

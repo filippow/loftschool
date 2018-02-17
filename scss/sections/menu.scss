@@ -66,9 +66,8 @@
 	.menu__info {
 			transition:.5s;
 		width: 540px;
-    	padding: 9% 6% 6% 6%;
-    	padding-top: 9%;
-		line-height:25px;
+		line-height:24px;
+		padding:0;
 		
 		@include tablets() {
 			width:87.5%;
@@ -88,9 +87,12 @@
 	}
 	.menu__text-rotate {
 		color:#f9b43b;
+		@include phones() {
 
+		}
 	}
 	.menu__item {
+		transition:.5s;
 		@include tablets() {
 			width:15%;
 		}
@@ -100,7 +102,7 @@
 	}
 }
 .menu__item {
-	transition:0s;
+	transition:.5s;
 	position:absolute;
 	left:0;
 	top:0;
@@ -108,17 +110,28 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: right;
-	height:100vh;
+	height:100%;
 	width:80px;
 	font-size: 40px;
 	font-family: Gagalin, Arial;
 	z-index:1;
 	@include tablets() {
 		width:100%;
+		max-width:80px;
 	}
 	@include phones() {
 	
 	}
+}
+.menu__content {
+	padding: 60px 0px 0 35px;
+    box-sizing: border-box;
+    width: 510px;
+    height: auto;
+    @include tablets() {
+    	width: 95%;
+    	padding:0;
+    }
 }
 .menu__item-bg {
 	background: rgba(0,0,0, 0.55);
@@ -128,17 +141,19 @@
 }
 .menu__info {
 	transition:.5s;
-
+	line-height:24px;
 	display:inline-block;
 	overflow: hidden;
 	position:absolute;
 	top:0;
 	right:0;
 	background:rgba(46,49,51,0.95);
-	padding:30px 20px 0 20px;
+	padding: 0;
 	width:0;
 	height: 100%;
 	box-sizing:border-box;
+
+
 	@include phones() {
     	padding: 9% 8% 5% 73%;		
 	}
@@ -160,6 +175,48 @@
 	}
 	@include phones() {
 		font-size: 2.0rem;
-    	left: 8%;
+    	left:0%;
 	}
 }
+
+
+@media screen and (max-width: 768px) {
+		.menu__content  {
+			width:450px;
+		}
+		.menu__info {
+			padding-top:55px;
+		}
+}
+@media screen and (max-width: 700px) {
+		.menu__content  {
+			width:370px;
+		}
+}
+@media screen and (max-width: 600px) {
+		.menu__content  {
+			width:300px;
+		}
+}
+@media screen and (max-width: 440px) {
+		.menu__content  {
+			width:210px;
+		}
+		.menu__text-rotate {
+			font-size: 1.5rem;
+    		left: 4%;
+		}
+}
+@media screen and (max-width: 370px) {
+		.menu__content  {
+			width:180px;
+		}
+}
+
+
+
+
+
+
+
+//   new
