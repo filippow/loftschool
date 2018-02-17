@@ -75,6 +75,9 @@
 		margin: 0;
     	height: 54%;
 	}
+	@include minphones() {
+		height: 50%;
+	}
 }
 .slider__button {
 	cursor:pointer;
@@ -233,6 +236,9 @@
 		    margin-top: 17%;
     height: 71%;
 	}
+	@include minphones() {
+		    margin-top: 7%;
+	}
 }
 .slider__burger-img {
 		max-width:100%;
@@ -244,6 +250,10 @@
     @include phones() {
     	width: 84%;
     	height: 91%;
+    }
+    @include minphones() {
+    	    width: 75%;
+    height: 100%;
     }
 }
 .slider__kkal {
@@ -305,8 +315,9 @@
 	@include minphones() {
 		    font-size: 2.6rem;
     		line-height: 2.9rem;
-    		margin-top: 15px;
+
     		width:100%;
+    		    margin-top: 10px;
 	}
 }
 .slider__description {
@@ -332,7 +343,10 @@
     	margin-bottom: -4%;
 	}
 	@include minphones() {
-		line-height: 20px;
+		    line-height: 17px;
+    	margin-top: 1%;
+    	margin-bottom: -8%;
+    	text-align: center;
 	}
 }
 .slider__buy {

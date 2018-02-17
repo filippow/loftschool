@@ -9,9 +9,8 @@ const isMobile = mobileDetect.mobile();
 
 
 const setActiveMenuItem = itemEq => {
-
-  $('.navigat__item').eq(itemEq).addClass('navigat__item--active')
-    .siblings().removeClass('navigat__item--active')
+  	$('.navigat__item').eq(itemEq).addClass('navigat__item--active')
+    	.siblings().removeClass('navigat__item--active')
 } 
 
 function scrollToSection(direction) {
@@ -31,29 +30,27 @@ function scrollToSection(direction) {
 		}
 }
 
+$('.arrows__img').on('click', function(e) {
+	performTransition(1);
+});
+
 function performTransition(sectionEq) {
 	
 	if (isScroll) return;
 
-	isScroll=true;
-			
+	isScroll=true;	
 	var position = `${sectionEq * -100}%`;
+
 	display.css({
 		'transform' : `translate(0, ${position})`,
 		'-webkit-transform' : `translate(0, ${position})`,
 	});
 	sections.eq(sectionEq).addClass('section--active').siblings().removeClass('section--active');
 	setActiveMenuItem(sectionEq);
-	console.log('sectionEq' , sectionEq);
 
 	setTimeout( function() {
 			isScroll=false;
-	
-
-
 		},600);
-
-	
 }
 
 $(document).on({
@@ -83,19 +80,16 @@ $('[data-scroll-to]').on('click', e => {
 	e.preventDefault();
 
 	var target = parseInt($(e.currentTarget).attr('data-scroll-to'));
-	console.log('target', target);
 	performTransition(target);
-})
+});
 
 if (isMobile) {
 
 $("document").swipe( {
     
-    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-    		
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {	
     	const scrollDirection = direction === 'down' ? 'up' : 'down';
       	scrollToSection(scrollDirection);
     }
   });
-
 }

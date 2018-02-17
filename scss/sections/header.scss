@@ -5,6 +5,10 @@
 	background-repeat:no-repeat;
 	background-size:cover;
 	min-height:rem(650px);
+	@include phones() {
+		min-height:100%;
+		max-height:100%;
+	}
 }
 .header__container {
 	height:100%;
@@ -142,6 +146,9 @@
     margin: 0;
     text-align: center;
 	}
+	@include minphones() {
+		    padding-top: 0;
+	}
 }
 .header__img {
 	margin-top:-121px;
@@ -167,6 +174,9 @@
 		height: 50%;
 		margin-top:15%;
 	}
+	@include minphones() {
+		margin-top: 15%;
+	}
 }
 .title--header {
 	padding:85px 0 0 10px;
@@ -184,6 +194,9 @@
 		    margin: -7% 0px 0 2%;
 		    text-align:center;
 	}
+	@include minphones() {
+		font-size: 3.5rem;
+	}
 }
 .header__descr {
 	color:#fff;
@@ -199,7 +212,11 @@
 	@include phones() {
 		font-size:3.5rem;
 		margin-top: -1%;
-
+	}
+	@include minphones() {
+		font-size: 2.8rem;
+    line-height: 42px;
+    padding-top: 20px;
 	}
 }
 .arrows {
@@ -217,6 +234,9 @@
 	}
 	@include phones() {
 		margin-bottom:15px;
+	}
+	@include minphones() {
+		  margin-bottom: 15%;
 	}
 }
 ////////////////////////////////////////////////////////
@@ -265,6 +285,9 @@
 .under-menu__item {
 	margin-top: 52px;
 	position:relative;
+	@include minphones() {
+		  margin-top: 30px;
+	}
 }
 
 .under-menu__link {
