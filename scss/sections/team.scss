@@ -67,7 +67,7 @@
 }
 .team-acco__item {
 	margin: 0 0 3% 0;
-	transition:1s ;
+	transition:.5s ;
 	@include tablets() {
     	width: 50%;
     	margin: 0 0 3% 0;
@@ -125,7 +125,7 @@
 	
 	height: 0px;	
 	overflow:hidden;
-	transition:1s;
+	transition:.5s;
 	display: flex;
     flex-direction: row;
     padding: 4% 0 0 0;

@@ -7,7 +7,11 @@ var isScroll=false;
 const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
 
+const tabletDetect = new MobileDetect(window.navigator.userAgent);
+const isTablet = tabletDetect.tablet();
 
+
+if (!isMobile || !isTablet) {
 const setActiveMenuItem = itemEq => {
   	$('.navigat__item').eq(itemEq).addClass('navigat__item--active')
     	.siblings().removeClass('navigat__item--active')
@@ -72,7 +76,7 @@ $(document).on({
 				break;
 		}
 	},
-//	touchmove: el=> el.preventDefault()
+	//touchmove: el=> el.preventDefault()
 
 });
 
@@ -82,6 +86,12 @@ $('[data-scroll-to]').on('click', e => {
 	var target = parseInt($(e.currentTarget).attr('data-scroll-to'));
 	performTransition(target);
 });
+
+}
+else {
+
+
+}
 
 /*		отключим One Page Scroll на мобилках
 
@@ -95,3 +105,5 @@ $("document").swipe( {
     }
   });
 }
+
+*/
