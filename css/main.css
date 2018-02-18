@@ -627,7 +627,7 @@ h1, h2, h3, h4, h5, h6 {
       .description__info p {
         line-height: 1.4rem; } }
 
-.webest__svg {
+.description__svg {
   width: 100px;
   height: 90px;
   margin-bottom: 10px; }
@@ -924,7 +924,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   width: 100%; }
 
-.slider__about {
+.slider__about, .kkal__about {
   font-size: 14px;
   font-family: Gagalin, Arial;
   text-transform: uppercase;
@@ -2009,7 +2009,13 @@ h1, h2, h3, h4, h5, h6 {
       margin: 0; } }
 
 .radio, .checkbox {
-  display: none; }
+  visibility: visible;
+  width: 0;
+  height: 0; }
+
+.radio:focus + .radio-custom,
+.checkbox:focus + .checkbox-custom {
+  outline: 1px solid #fcc25c; }
 
 .radio-custom, .checkbox-custom {
   width: 16px;
@@ -2048,7 +2054,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 4px;
   left: 4px;
   background: #e35028;
-  border-radius: 2px; }
+  border-radius: 50%; }
 
 .radio-custom,
 .radio:checked + .radio-custom::before {

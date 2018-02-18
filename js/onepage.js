@@ -72,7 +72,7 @@ $(document).on({
 				break;
 		}
 	},
-	touchmove: el=> el.preventDefault()
+//	touchmove: el=> el.preventDefault()
 
 });
 
@@ -82,6 +82,8 @@ $('[data-scroll-to]').on('click', e => {
 	var target = parseInt($(e.currentTarget).attr('data-scroll-to'));
 	performTransition(target);
 });
+
+/*		отключим One Page Scroll на мобилках
 
 if (isMobile) {
 

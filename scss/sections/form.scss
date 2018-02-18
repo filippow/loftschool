@@ -237,8 +237,17 @@
 	}
 }
 .radio, .checkbox {
-	display: none;
+	visibility: visible;
+	width: 0;
+	height: 0;
+	
 }
+.radio:focus + .radio-custom,
+.checkbox:focus + .checkbox-custom  {
+	outline: 1px solid #fcc25c;
+
+}
+
 .radio-custom, .checkbox-custom {
 	width: 16px;
 	height: 16px;
@@ -276,7 +285,7 @@
 	bottom: 4px;
 	left: 4px;
 	background: #e35028;
-	border-radius: 2px;
+	border-radius: 50%;
 }
 .radio-custom,
 .radio:checked + .radio-custom::before {

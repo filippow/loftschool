@@ -64,9 +64,9 @@
 }
 
 .description__info {
-	text-align:center;
-	width:100%;
-	display:flex;
+		text-align:center;
+		width:100%;
+		display:flex;
 		justify-content:space-around;
 		flex-direction:column;
 	@include tablets() {
@@ -88,10 +88,9 @@
 		}
 	}
 }
-.webest__svg {
+.description__svg {
 	width: 100px;
 	height: 90px;
-	
 	margin-bottom:10px;
 }
 .description__title {
@@ -104,7 +103,6 @@
 	display:block;
 	line-height:27px;
 	flex:1;
-
 	@include phones {
 		font-size:1.5rem;
 		margin-top: 20px;
