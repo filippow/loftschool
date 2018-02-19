@@ -1,5 +1,4 @@
 
-
 $('#order__form').on('submit', submitForm);
 
 var submitForm = function (ev) {
