@@ -7,6 +7,16 @@
 	position: relative;
 	box-sizing:border-box;
 }
+.title--accordion {
+	position:absolute;
+	color:#fff;
+	top:100px;
+	left:90px;
+	@include tablets() {
+		top:50px;
+		left:50px;
+	}
+}
 .accordion {
 	position:absolute;
 	right:0;
@@ -161,7 +171,7 @@
 }
 
 
-
+/*
 
 .menu {
 	background: url("../img/bg_menu.jpg");
@@ -379,7 +389,7 @@
 }
 
 
-
+*/
 
 
 

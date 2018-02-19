@@ -1,12 +1,18 @@
 .contaier--best {
 	height:78%;
+	@include tablets() {
+		height: 56%;
+	}
+	@include phones() {
+		height:78%;
+	}
 }
 .title--black {
 	color:#2f3234;
 	margin-top:-15px;
 	margin-bottom:5px;
 	@include tablets() {
-		margin-top:-165px;
+		margin-top:0;
 	}
 	@include phones() {
 		font-size:3.5rem;
