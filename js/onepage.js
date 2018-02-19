@@ -11,7 +11,8 @@ const tabletDetect = new MobileDetect(window.navigator.userAgent);
 const isTablet = tabletDetect.tablet();
 
 
-if (!isMobile || !isTablet) {
+if (!isMobile && !isTablet) {
+	console.log('da');
 const setActiveMenuItem = itemEq => {
   	$('.navigat__item').eq(itemEq).addClass('navigat__item--active')
     	.siblings().removeClass('navigat__item--active')
@@ -88,22 +89,13 @@ $('[data-scroll-to]').on('click', e => {
 });
 
 }
+
 else {
 
+$('[data-scroll-to]').on('click', e => {
+	e.preventDefault();
+	console.log('fuf');
+
+});
 
 }
-
-/*		отключим One Page Scroll на мобилках
-
-if (isMobile) {
-
-$("document").swipe( {
-    
-    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {	
-    	const scrollDirection = direction === 'down' ? 'up' : 'down';
-      	scrollToSection(scrollDirection);
-    }
-  });
-}
-
-*/

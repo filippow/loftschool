@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 .header	 {
 	height:100vh;
 	width:100%;
@@ -37,7 +48,7 @@
 .logo {
 	margin-right: auto;
 	margin-top:1%;
-	margin-left:1%;
+	margin-left:0%;
 	@include tablets() {
 		margin: -30px 0px 0 19px;
    		margin-right: auto;
@@ -91,7 +102,8 @@
 		margin: -35px 39px 0 0;
 	}
 	@include phones() {
-		margin: 0px 40px 0 0;
+		padding: 0.625rem 1.575rem 0.625rem 1.375rem;
+    	margin: 5px 33px 0 0;
 	}
 }
 .gamburger {
@@ -105,10 +117,10 @@
 	width: 0;
 	@include tablets() {
 		width: 23px;
-		 margin: -35px 30px 0 0;
+		margin: -35px 30px 0 0;
 	}
 	@include phones() {
-		    margin: 0px 20px 0 0;
+		margin: 6px 20px 0 0;
 	}
 }
 .gamburger__item {
@@ -126,39 +138,46 @@
 		height: 70%;
 		flex-direction:column;
 		align-items:center;
-
 	}
 	@include phones() {
-	height: 80%;	
+		height: 80%;	
 	}
 }
 .header__left {
 	width: 50%;
-	margin-top:7%;
+	height:100%;
 	@include tablets() {
-	margin: 123px 0px 0 0;
-    width: 60%
+		margin: 4% 0px 0 0;
+    	width: 60%
 	}
 	@include phones() {
-	height: 50%;
-    width: 77%;
-    padding-top: 11%;
-    margin: 0;
-    text-align: center;
+		height: 50%;
+    	width: 77%;
+    	padding-top: 11%;
+    	margin: 0;
+    	text-align: center;
 	}
 	@include minphones() {
-		    padding-top: 0;
+		margin-top: 4%;
+    		padding-top: 0;
+    		height: 50%;
+    		box-sizing: border-box;
 	}
 }
 .header__img {
-	margin-top:-121px;
-	
-	width: 100%;
+	margin-top: -10%;
+    padding-left: 5%;
+    width: 95%;
 	@include tablets() {
+		width: 99%;
+    	padding-left: 0;
 	}
 	@include phones() {
-		margin-top:0%;	
-    	width: 92%;
+		    margin-top: -10%;
+    width: 97%;
+	}
+	@include minphones() {
+		margin:0;
 	}
 }
 .header__right {
@@ -171,28 +190,29 @@
 	}
 	@include phones() {
 		width: 100%;
-		height: 50%;
-		margin-top:15%;
+		height: 40%;
+    	margin: 0;
+    	padding: 0;
 	}
 	@include minphones() {
-		margin-top: 15%;
+		margin-top: 10%;
 	}
 }
 .title--header {
-	padding:85px 0 0 10px;
+	padding: 90px 0 0 2px;
 	
 	text-align: left;
     margin-left: 7px;
 	@include tablets() {
-		
 		padding:0 0 0 0;
-		
 		margin:6px 0 0 0;
 		text-align:center;
 	}
 	@include phones() {
-		    margin: -7% 0px 0 2%;
-		    text-align:center;
+		text-align:center;
+		height: 36%;
+    	margin: 0 0 0 0;
+    	padding: 2% 0 0 0;
 	}
 	@include minphones() {
 		font-size: 3.5rem;
@@ -202,16 +222,21 @@
 	color:#fff;
 	font-size:rem(60px);
 	font-family: Lifehack,Arial;
-	margin-top:20px;
 	line-height: 60px;
-	padding-left:15px;
+	margin-top: 13px;
+    padding-left: 9px;
 	@include tablets() {
 	    font-size: 4.5rem;
 	    text-align:center;
+	    margin-top: 22px;
+    	padding-left: 18px;
 	}
 	@include phones() {
 		font-size:3.5rem;
-		margin-top: -1%;
+		margin: -3% 0 0 0;
+    	padding: 0% 0 0 0;
+    	height: 47%;
+    	line-height: 1.2;
 	}
 	@include minphones() {
 		font-size: 2.8rem;
