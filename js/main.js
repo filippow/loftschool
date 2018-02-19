@@ -1,5 +1,7 @@
 
 
+
+
 //Аккордеон для секции МЕНЮ
 
  var acco2 = document.querySelectorAll(".menu__list"); 
@@ -19,23 +21,7 @@
  		
  	});
  }
-  var acco3 = document.querySelectorAll(".menu__item2"); 
- for (var i=0; i<acco3.length; i++) {
- 	acco3[i].addEventListener('click',function(el) {
- 		
- 		if (el.currentTarget.classList.contains('menu__item2--active')) {
 
- 			el.currentTarget.classList.remove('menu__item2--active');
- 		}
- 		else {
- 			for (var j=0; j<acco3.length; j++) {
- 					acco3[j].classList.remove('menu__item2--active');
- 				}
- 				el.currentTarget.classList.add('menu__item2--active');
- 		}
- 		
- 	});
- }
 
 //Аккордеон для секции КОМАНДА
 
@@ -143,6 +129,10 @@ var show = document.querySelectorAll('.consist-info');
 				show[3].classList.toggle('consist-info--visible');
 				consist[3].classList.toggle('slider__consist--red');
 	});
+		consist[4].addEventListener('click',function() {
+				show[4].classList.toggle('consist-info--visible');
+				consist[4].classList.toggle('slider__consist--red');
+	});
 
 window.addEventListener('resize', function() {  
   size = parseInt(getComputedStyle(sliderContainer).width); 
@@ -203,3 +193,26 @@ for (var w=0; w<button.length; w++) {
 	});
 }
 
+
+// 				МЕНЮ   
+
+var acco3 = document.querySelectorAll(".accordion__item"); 
+ console.log(acco3.length);
+ for (var i=0; i<acco3.length; i++) {
+ 	acco3[i].addEventListener('click',function(e) {
+ 		
+ 		if (e.currentTarget.classList.contains('accordion__item--active')) {
+
+ 			e.currentTarget.classList.remove('accordion__item--active');
+ 		}
+ 		else {
+ 			for (var j=0; j<acco3.length; j++) {
+ 					acco3[j].classList.remove('accordion__item--active');
+ 				}
+ 			e.currentTarget.classList.add('accordion__item--active');
+ 		}
+ 		
+ 	});
+ }
+ 
+ 
